@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Blog coletivo da Horta CQC Agro, desenvolvido pelos estudantes do 1º ano do Ensino Médio Técnico em Agronegócio.">
+  <title>Blog Horta CQC Agro</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="cabecalho" id="inicio">
+    <nav class="navegacao container">
+      <a href="#inicio" class="logo">
+        <span class="logo-icone">🌱</span>
+        <span>Horta CQC Agro</span>
+      </a>
+
+      <button
+        class="botao-menu"
+        id="botao-menu"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="menu"
+      >
+        ☰
+      </button>
+
+      <ul class="menu" id="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#projeto">O projeto</a></li>
+        <li><a href="#relatos">Relatos</a></li>
+        <li><a href="#plantamos">O que plantamos</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#escola">A escola</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banner">
+      <div class="container banner-conteudo">
+        <div class="banner-texto">
+          <span class="etiqueta">1º ano do Ensino Médio Técnico em Agronegócio</span>
+
+          <h1>Cultivando conhecimento, experiências e histórias</h1>
+
+          <p>
+            Um blog coletivo para registrar, semana após semana, tudo o que
+            aprendemos e vivenciamos na horta da escola.
+          </p>
+
+          <div class="banner-botoes">
+            <a href="#relatos" class="botao botao-principal">Ler os relatos</a>
+            <a href="#projeto" class="botao botao-secundario">Conhecer o projeto</a>
+          </div>
+        </div>
+
+        <div class="mascotes">
+          <article class="cartao-mascote">
+            <img src="img/banha.png" alt="Banha, mascote da turma">
+            <div>
+              <strong>Banha</strong>
+              <p>“Vamos acompanhar cada etapa da nossa horta!”</p>
+            </div>
+          </article>
+
+          <article class="cartao-mascote">
+            <img src="img/toicinho.png" alt="Toicinho, mascote da turma">
+            <div>
+              <strong>Toicinho</strong>
+              <p>“Sempre tem uma novidade crescendo por aqui!”</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="onda" aria-hidden="true"></div>
+    </section>
+
+    <section class="numeros">
+      <div class="container grade-numeros">
+        <article>
+          <span id="total-relatos">0</span>
+          <p>relatos publicados</p>
+        </article>
+
+        <article>
+          <span id="total-semanas">0</span>
+          <p>semanas registradas</p>
+        </article>
+
+        <article>
+          <span id="total-plantas">0</span>
+          <p>cultivos acompanhados</p>
+        </article>
+
+        <article>
+          <span id="total-fotos">0</span>
+          <p>fotos na galeria</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="secao" id="projeto">
+      <div class="container duas-colunas">
+        <div>
+          <span class="subtitulo">Sobre o projeto</span>
+          <h2>Da terra para a tela</h2>
+
+          <p>
+            O projeto une as atividades práticas desenvolvidas na horta às aulas
+            de Educação Digital. Depois de cada encontro, os estudantes produzem
+            relatos individuais contando o que fizeram, aprenderam, observaram e
+            sentiram durante a experiência.
+          </p>
+
+          <p>
+            Os textos, as fotografias e as descobertas são organizados neste
+            blog, formando um diário coletivo da turma e mostrando a evolução da
+            horta ao longo do trimestre.
+          </p>
+        </div>
+
+        <aside class="caixa-destaque">
+          <span class="icone-destaque">💡</span>
+          <div>
+            <h3>Objetivos do blog</h3>
+            <ul>
+              <li>Registrar a evolução da horta.</li>
+              <li>Desenvolver escrita, criatividade e observação.</li>
+              <li>Aplicar conhecimentos de HTML, CSS e JavaScript.</li>
+              <li>Compartilhar as experiências da turma.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="secao secao-escura" id="relatos">
+      <div class="container">
+        <div class="titulo-secao">
+          <div>
+            <span class="subtitulo">Diário da horta</span>
+            <h2>Relatos dos estudantes</h2>
+          </div>
+
+          <div class="filtros" aria-label="Filtros dos relatos">
+            <button class="filtro ativo" type="button" data-filtro="todos">Todos</button>
+            <button class="filtro" type="button" data-filtro="plantio">Plantio</button>
+            <button class="filtro" type="button" data-filtro="cuidados">Cuidados</button>
+            <button class="filtro" type="button" data-filtro="aprendizado">Aprendizados</button>
+          </div>
+        </div>
+
+        <div class="grade-relatos" id="lista-relatos">
+          <article class="relato" data-categoria="plantio" data-semana="1">
+            <div class="relato-imagem">
+              <img src="img/horta-semana-1.jpg" alt="Preparação dos canteiros da horta">
+              <span class="categoria">Plantio</span>
+            </div>
+
+            <div class="relato-conteudo">
+              <div class="relato-informacoes">
+                <span>📅 07/08/2026</span>
+                <span>🌱 Semana 1</span>
+              </div>
+
+              <h3>Começamos a preparar a nossa horta</h3>
+
+              <p>
+                Hoje conhecemos o espaço onde será feita a horta e começamos a
+                organizar os canteiros. Aprendemos que o solo precisa ser
+                preparado antes do plantio e dividimos algumas tarefas entre a
+                turma. Foi interessante perceber quanto trabalho existe antes
+                mesmo de colocar as primeiras mudas.
+              </p>
+
+              <footer>
+                <span class="autor">Texto de: Nome do estudante</span>
+                <button class="ler-mais" type="button">Ler relato completo</button>
+              </footer>
+            </div>
+          </article>
+
+          <article class="relato" data-categoria="cuidados" data-semana="2">
+            <div class="relato-imagem">
+              <img src="img/horta-semana-2.jpg" alt="Estudantes cuidando das plantas">
+              <span class="categoria">Cuidados</span>
+            </div>
+
+            <div class="relato-conteudo">
+              <div class="relato-informacoes">
+                <span>📅 14/08/2026</span>
+                <span>🌿 Semana 2</span>
+              </div>
+
+              <h3>Aprendemos a cuidar do solo</h3>
+
+              <p>
+                Nesta aula observamos como estava a terra e retiramos materiais
+                que poderiam atrapalhar o desenvolvimento das plantas. Também
+                conversamos sobre a quantidade de água necessária e sobre os
+                cuidados que teremos durante as próximas semanas.
+              </p>
+
+              <footer>
+                <span class="autor">Texto de: Nome do estudante</span>
+                <button class="ler-mais" type="button">Ler relato completo</button>
+              </footer>
+            </div>
+          </article>
+
+          <article class="relato" data-categoria="aprendizado" data-semana="3">
+            <div class="relato-imagem sem-foto">
+              <span>📷 Foto da atividade</span>
+              <span class="categoria">Aprendizados</span>
+            </div>
+
+            <div class="relato-conteudo">
+              <div class="relato-informacoes">
+                <span>📅 21/08/2026</span>
+                <span>📖 Semana 3</span>
+              </div>
+
+              <h3>Uma descoberta da semana</h3>
+
+              <p>
+                Este espaço pode receber o próximo relato individual enviado
+                pelos estudantes. Cada texto deve ser escrito com as próprias
+                palavras e apresentar o olhar pessoal do aluno sobre a aula.
+              </p>
+
+              <footer>
+                <span class="autor">Texto de: Nome do estudante</span>
+                <button class="ler-mais" type="button">Ler relato completo</button>
+              </footer>
+            </div>
+          </article>
+        </div>
+
+        <p class="mensagem-vazia" id="mensagem-vazia" hidden>
+          Nenhum relato foi encontrado nesta categoria.
+        </p>
+      </div>
+    </section>
+
+    <section class="secao" id="plantamos">
+      <div class="container">
+        <div class="titulo-secao">
+          <div>
+            <span class="subtitulo">Acompanhamento</span>
+            <h2>O que estamos cultivando</h2>
+          </div>
+
+          <p>
+            Os cartões podem ser atualizados com as espécies realmente
+            cultivadas pela turma.
+          </p>
+        </div>
+
+        <div class="grade-plantas">
+          <article class="planta">
+            <span class="planta-icone">🥬</span>
+            <h3>Alface</h3>
+            <p><strong>Plantio:</strong> preencher a data</p>
+            <p><strong>Previsão de colheita:</strong> preencher</p>
+            <div class="progresso">
+              <span style="width: 35%"></span>
+            </div>
+            <small>35% do ciclo acompanhado</small>
+          </article>
+
+          <article class="planta">
+            <span class="planta-icone">🌿</span>
+            <h3>Cebolinha</h3>
+            <p><strong>Plantio:</strong> preencher a data</p>
+            <p><strong>Previsão de colheita:</strong> preencher</p>
+            <div class="progresso">
+              <span style="width: 20%"></span>
+            </div>
+            <small>20% do ciclo acompanhado</small>
+          </article>
+
+          <article class="planta">
+            <span class="planta-icone">🌱</span>
+            <h3>Próximo cultivo</h3>
+            <p><strong>Espécie:</strong> a turma decidirá</p>
+            <p><strong>Plantio:</strong> aguardando</p>
+            <div class="progresso">
+              <span style="width: 5%"></span>
+            </div>
+            <small>Em planejamento</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao galeria" id="galeria">
+      <div class="container">
+        <div class="titulo-secao">
+          <div>
+            <span class="subtitulo">Memórias do projeto</span>
+            <h2>Galeria da horta</h2>
+          </div>
+        </div>
+
+        <div class="grade-galeria">
+          <figure>
+            <img src="img/galeria-1.jpg" alt="Atividade realizada na horta">
+            <figcaption>Primeiros trabalhos no espaço da horta</figcaption>
+          </figure>
+
+          <figure>
+            <img src="img/galeria-2.jpg" alt="Preparação da terra">
+            <figcaption>Preparação da terra</figcaption>
+          </figure>
+
+          <figure>
+            <img src="img/galeria-3.jpg" alt="Estudantes durante a atividade">
+            <figcaption>Aprendizado na prática</figcaption>
+          </figure>
+
+          <figure class="foto-placeholder">
+            <span>📷</span>
+            <figcaption>Próxima foto da turma</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao-escola" id="escola">
+      <div class="container duas-colunas">
+        <div>
+          <span class="subtitulo">Nossa escola</span>
+          <h2>Colégio Estadual Conselheiro Quielse Crisóstomo da Silva</h2>
+
+          <p>
+            Este espaço pode apresentar a escola, a turma e o novo curso Técnico
+            em Agronegócio. Vocês também podem acrescentar uma breve explicação
+            sobre a importância da formação técnica e das atividades práticas.
+          </p>
+        </div>
+
+        <div class="cartao-informacao">
+          <h3>Equipe do projeto</h3>
+          <p>👩‍🌾 Professora responsável pelas disciplinas específicas</p>
+          <p>💻 Professora de Educação Digital</p>
+          <p>🎓 Estudantes do 1º ano do Ensino Médio</p>
+          <p>🐷 Mascotes: Toicinho e Banha</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <div>
+        <strong>🌱 Blog Horta CQC Agro</strong>
+        <p>
+          Desenvolvido coletivamente pelos estudantes nas aulas de Educação
+          Digital.
+        </p>
+      </div>
+
+      <a href="#inicio" class="voltar-topo">↑ Voltar ao início</a>
+    </div>
+
+    <p class="direitos">
+      © <span id="ano-atual"></span> Horta CQC Agro — Cultivando conhecimento.
+    </p>
+  </footer>
+
+  <div class="modal" id="modal-relato" aria-hidden="true">
+    <div class="modal-fundo" data-fechar-modal></div>
+
+    <article
+      class="modal-conteudo"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-titulo"
+    >
+      <button
+        class="modal-fechar"
+        type="button"
+        aria-label="Fechar relato"
+        data-fechar-modal
+      >
+        ×
+      </button>
+
+      <span class="modal-categoria" id="modal-categoria"></span>
+      <h2 id="modal-titulo"></h2>
+      <p class="modal-dados" id="modal-dados"></p>
+      <p id="modal-texto"></p>
+      <strong id="modal-autor"></strong>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
