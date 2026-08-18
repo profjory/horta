@@ -3,24 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Horta - Blog</title>
-    
-    <!-- Estilos CSS -->
+    <title>Projeto Horta - Blogs dos Alunos</title>
     <style>
-        /* Configurações Globais */
         :root {
-            --cor-principal: #2e7d32; /* Verde horta */
-            --cor-secundaria: #81c784;
+            --cor-principal: #2e7d32;
             --cor-fundo: #f4f6f4;
-            --cor-texto: #333333;
             --cor-card: #ffffff;
+            --cor-texto: #333333;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
         }
 
         body {
@@ -29,17 +25,15 @@
             line-height: 1.6;
         }
 
-        /* Cabeçalho */
         header {
             background-color: var(--cor-principal);
             color: white;
             text-align: center;
             padding: 2.5rem 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 0.5rem;
         }
 
@@ -48,149 +42,111 @@
             opacity: 0.9;
         }
 
-        /* Conteúdo Principal */
         main {
-            max-width: 900px;
+            max-width: 800px;
             margin: 2rem auto;
             padding: 0 1rem;
         }
 
-        /* Seção Sobre o Projeto */
-        .sobre-card {
-            background: var(--cor-card);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            border-left: 6px solid var(--cor-principal);
-        }
-
-        /* Grid de Publicações */
-        .posts {
+        .grid-alunos {
             display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
-        /* Card do Post */
-        article.post {
+        .card-aluno {
             background: var(--cor-card);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            padding: 1.8rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-top: 5px solid var(--cor-principal);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        article.post:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        .card-aluno:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.12);
         }
 
-        .post-conteudo {
-            padding: 1.5rem;
-        }
-
-        .post-data {
-            font-size: 0.85rem;
-            color: #666;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .post-titulo {
+        .card-aluno h2 {
             color: var(--cor-principal);
             font-size: 1.4rem;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.5rem;
         }
 
-        .post-texto {
-            margin-bottom: 1rem;
+        .card-aluno p {
+            color: #555;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
         }
 
-        /* Botão de Curtir */
-        .btn-curtir {
-            background-color: transparent;
-            border: 2px solid var(--cor-principal);
-            color: var(--cor-principal);
-            padding: 0.4rem 0.8rem;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.2s;
-        }
-
-        .btn-curtir:hover {
+        .btn-acessar {
+            display: inline-block;
+            text-align: center;
             background-color: var(--cor-principal);
             color: white;
+            text-decoration: none;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
         }
 
-        /* Rodapé */
+        .btn-acessar:hover {
+            background-color: #1b5e20;
+        }
+
         footer {
             text-align: center;
             padding: 1.5rem;
             margin-top: 3rem;
-            background-color: #e8eee8;
-            color: #555;
+            color: #666;
             font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
-    <!-- Cabeçalho do Blog -->
     <header>
-        <h1 id="titulo-blog">Diário da Horta</h1>
-        <p id="subtitulo-blog">Acompanhando o crescimento e o aprendizado no cultivo!</p>
+        <h1>Projeto Horta</h1>
+        <p>Acompanhe os blogs dos alunos do projeto</p>
     </header>
 
     <main>
-        <!-- Apresentação do Aluno/Projeto -->
-        <section class="sobre-card">
-            <h2>Sobre o Projeto</h2>
-            <p>Este blog foi criado para registrar os passos, desafios e descobertas do projeto de horta escolar. Acompanhe nossas postagens abaixo!</p>
-        </section>
-
-        <!-- Postagens -->
-        <section class="posts">
+        <section class="grid-alunos">
             
-            <!-- Post 1 -->
-            <article class="post">
-                <div class="post-conteudo">
-                    <span class="post-data">📅 Postado recentemente</span>
-                    <h3 class="post-titulo">Preparo do Solo e Plantio</h3>
-                    <p class="post-texto">
-                        Hoje começamos a preparar a terra! Adicionamos adubo orgânico, deixamos o solo fofo e plantamos as primeiras sementes. Agora é manter a rega diária e acompanhar o surgimento dos primeiros brotos.
-                    </p>
-                    <button class="btn-curtir" onclick="curtirPost(this)">🌱 Curtir (<span>0</span>)</button>
+            <!-- Card Blog Rafael Moreira -->
+            <article class="card-aluno">
+                <div>
+                    <h2>Blog da Horta</h2>
+                    <p>Aluno: Rafael Moreira</p>
                 </div>
+                <a href="https://santosgodoymaria-source.github.io/blog-horta/" target="_blank" rel="noopener noreferrer" class="btn-acessar">
+                    Acessar Blog do Rafael
+                </a>
             </article>
 
-            <!-- Post 2 (Exemplo) -->
-            <article class="post">
-                <div class="post-conteudo">
-                    <span class="post-data">📅 Post anterior</span>
-                    <h3 class="post-titulo">Primeiros Brotos Acontecendo</h3>
-                    <p class="post-texto">
-                        Após alguns dias de rega e cuidados com o sol, os primeiros raminhos começaram a brotar da terra. É muito gratificante ver a natureza em desenvolvimento!
-                    </p>
-                    <button class="btn-curtir" onclick="curtirPost(this)">🌱 Curtir (<span>0</span>)</button>
+            <!-- Card Blog Maria Eduarda Godoy Santos -->
+            <article class="card-aluno">
+                <div>
+                    <h2>Horta da Maria</h2>
+                    <p>Aluna: Maria Eduarda Godoy Santos</p>
                 </div>
+                <a href="https://santosgodoymaria-source.github.io/horta-da-Maria/" target="_blank" rel="noopener noreferrer" class="btn-acessar">
+                    Acessar Blog da Maria
+                </a>
             </article>
 
         </section>
     </main>
 
-    <!-- Rodapé -->
     <footer>
-        <p>Desenvolvido no Projeto Horta Escolar • GitHub Pages</p>
+        <p>Projeto Horta • GitHub Pages</p>
     </footer>
 
-    <!-- Script de Interatividade -->
-    <script>
-        function curtirPost(botao) {
-            const contador = botao.querySelector('span');
-            let atual = parseInt(contador.innerText);
-            contador.innerText = atual + 1;
-        }
-    </script>
 </body>
 </html>
