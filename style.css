@@ -1,11 +1,8 @@
-/* RESET BÁSICO E CORES */
+/* RESET E CORES PRINCIPAIS */
 :root {
-    --fundo-pagina: #f4f7f4;
+    --fundo-pagina: #f0f4f0;       /* Fundo claro da página */
     --texto-escuro: #2c3e50;
-    --verde-agro: #2e7d32;
-    --degrade-inicio: #1b2a1c; /* Preto esverdeado */
-    --degrade-fim: #0d47a1;     /* Mix escuro para degrade dos quadros */
-    --degrade-card: linear-gradient(135deg, #111e12 0%, #1e3a1f 100%);
+    --verde-destaque: #81c784;
 }
 
 * {
@@ -16,14 +13,14 @@
 }
 
 body {
-    background-color: var(--fundo-pagina); /* FUNDO CLARO */
+    background-color: var(--fundo-pagina);
     color: var(--texto-escuro);
     line-height: 1.6;
 }
 
 /* CABEÇALHO */
 header {
-    background: #111e12;
+    background: #0b130c;
     color: #fff;
     padding: 1rem 2rem;
     display: flex;
@@ -32,13 +29,13 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
 header .logo {
     font-size: 1.4rem;
     font-weight: bold;
-    color: #81c784;
+    color: var(--verde-destaque);
 }
 
 header nav ul {
@@ -55,10 +52,10 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #81c784;
+    color: var(--verde-destaque);
 }
 
-/* ESTRUTURA E GRIDS */
+/* ESTRUTURA */
 main {
     max-width: 1100px;
     margin: 2rem auto;
@@ -72,23 +69,24 @@ main {
 .titulo-secao {
     text-align: center;
     margin-bottom: 1.5rem;
-    color: #1b2a1c;
+    color: #0b130c;
     font-size: 1.8rem;
 }
 
-/* QUADROS COM DEGRADÊ PRETO/VERDE */
+/* QUADROS COM DEGRADÊ MARCANTE DE PRETO E VERDE */
 .card-degrade {
-    background: var(--degrade-card); /* DEGRADÊ DE PRETO E VERDE */
+    /* Degradê do Preto Esverdeado (#0b130c) para o Verde Escuro (#1e3d20) */
+    background: linear-gradient(145deg, #0b130c 0%, #1a331c 60%, #254a28 100%);
     color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    padding: 1.8rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
     border: 1px solid #2e5a31;
 }
 
 .card-degrade h1, .card-degrade h2, .card-degrade h3 {
-    color: #a5d6a7;
-    margin-bottom: 0.5rem;
+    color: var(--verde-destaque);
+    margin-bottom: 0.6rem;
 }
 
 .card-degrade p {
@@ -119,12 +117,13 @@ main {
 
 .mascotes-container h2 {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    color: #0b130c;
 }
 
 .mascotes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
 }
 
@@ -132,54 +131,70 @@ main {
     text-align: center;
 }
 
-/* IMAGENS E EFEITO ZOOM (LIGHTBOX) */
+/* CONFIGURAÇÃO E AJUSTE DAS IMAGENS */
 .img-container {
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-top: 1rem;
     cursor: pointer;
+    background: rgba(0, 0, 0, 0.2); /* Fundo suave interno */
 }
 
 .img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* MANTÉM IMAGENS DE TAMANHOS DIFERENTES BEM PARECIDAS E ALINHADAS */
     display: block;
     transition: transform 0.3s ease;
 }
 
 .img-container:hover img {
-    transform: scale(1.04);
+    transform: scale(1.03);
+}
+
+/* CORREÇÃO DOS MASCOTES: NÃO CORTAR A CABEÇA OU CORPO */
+.img-mascote {
+    height: 280px; /* Mais espaço vertical */
+}
+
+.img-mascote img {
+    object-fit: contain !important; /* Mostra a imagem inteira sem cortar */
+    padding: 10px;
 }
 
 .zoom-hint {
     position: absolute;
     bottom: 8px;
     right: 8px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.75);
     color: #fff;
-    padding: 3px 8px;
+    padding: 4px 10px;
     font-size: 0.75rem;
-    border-radius: 4px;
+    border-radius: 6px;
     pointer-events: none;
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
-/* PADRONIZAÇÃO DE ALTURA DAS IMAGENS DO CAMPO E PROJETO */
+/* ALTURA PADRONIZADA DAS IMAGENS DE CAMPO */
 .img-fixed-height {
     height: 240px;
 }
 
-.img-square {
-    height: 180px;
+.img-fixed-height img {
+    object-fit: cover;
 }
 
 .img-circle {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
-    margin: 0 auto;
-    border: 3px solid #81c784;
+    margin: 0 auto 1rem auto;
+    border: 3px solid var(--verde-destaque);
+}
+
+.img-circle img {
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 /* STATUS BADGES */
@@ -207,11 +222,11 @@ main {
     text-align: center;
 }
 .prof-card span {
-    color: #81c784;
-    font-size: 0.9rem;
+    color: var(--verde-destaque);
+    font-size: 0.95rem;
 }
 
-/* SOBRE & BLOG */
+/* SEÇÃO BLOG DOS ALUNOS */
 .colegio-card {
     text-align: center;
 }
@@ -219,23 +234,40 @@ main {
     border: 0;
     height: 1px;
     background: #2e5a31;
-    margin: 1.5rem 0;
+    margin: 1.8rem 0;
 }
+
+.blog-grid-alunos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+.card-aluno {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(129, 199, 132, 0.3);
+}
+
 .btn-blog {
     display: inline-block;
     background: #2e7d32;
     color: #fff;
-    padding: 12px 24px;
-    border-radius: 30px;
+    padding: 10px 20px;
+    border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
-    margin-top: 1rem;
-    transition: background 0.3s;
+    font-size: 0.95rem;
+    margin-top: 0.8rem;
+    transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+
 .btn-blog:hover {
     background: #388e3c;
+    transform: translateY(-2px);
 }
 
 /* MODAL DE ZOOM DE IMAGEM */
@@ -243,12 +275,12 @@ main {
     display: none;
     position: fixed;
     z-index: 1000;
-    padding-top: 50px;
+    padding-top: 40px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0,0,0,0.92);
 }
 
 .modal-conteudo {
@@ -265,7 +297,7 @@ main {
     width: 80%;
     text-align: center;
     color: #ccc;
-    padding: 10px 0;
+    padding: 12px 0;
 }
 
 .fechar {
@@ -278,7 +310,7 @@ main {
     cursor: pointer;
 }
 
-/* RESPONSIVO PARA CELULAR */
+/* RESPONSIVO */
 @media (max-width: 600px) {
     header {
         flex-direction: column;
@@ -289,7 +321,7 @@ main {
         justify-content: center;
         gap: 0.8rem;
     }
-    .img-fixed-height {
-        height: 180px;
+    .img-mascote {
+        height: 220px;
     }
 }
