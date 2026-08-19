@@ -1,4 +1,4 @@
-/* RESET E ESTILOS GERAIS */
+/* RESET E CORES GERAIS (PRETO, VERDE E BRANCO) */
 * {
     margin: 0;
     padding: 0;
@@ -7,36 +7,28 @@
 }
 
 body {
-    background-color: #0d1117; /* Fundo escuro restaurado */
-    color: #e6edf3;
+    background-color: #0d1117; /* Fundo Preto / Escuro */
+    color: #ffffff; /* Texto Branco */
     line-height: 1.6;
 }
 
-/* CABEÇALHO */
+/* NAVEGAÇÃO */
 header {
     background-color: #161b22;
-    padding: 1rem 5%;
+    padding: 1.2rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #30363d;
+    border-bottom: 2px solid #2ea043; /* Detalhe Verde */
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
-    color: #2ea043;
-}
-
-.logo img {
-    width: 35px;
-    height: 35px;
+    color: #2ea043; /* Verde */
 }
 
 nav ul {
@@ -46,9 +38,9 @@ nav ul {
 }
 
 nav a {
-    color: #c9d1d9;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
@@ -56,21 +48,42 @@ nav a:hover {
     color: #2ea043;
 }
 
-/* CONTEÚDO PRINCIPAL */
+/* LAYOUT PRINCIPAL */
 main {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 2rem auto;
     padding: 0 20px;
 }
 
-.post-container {
-    background-color: #161b22;
-    padding: 2.5rem;
-    border-radius: 12px;
+.card-preto {
+    background-color: #161b22; /* Card Preto/Escuro */
     border: 1px solid #30363d;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
 }
 
+/* SEÇÃO SOBRE O COLÉGIO CQC */
+.sobre-colegio h2 {
+    color: #2ea043;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 0.5rem;
+}
+
+.colegio-detalhes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 1.5rem;
+    background-color: #0d1117;
+    padding: 1.2rem;
+    border-radius: 8px;
+    border-left: 4px solid #2ea043;
+}
+
+/* SEÇÃO DO BLOG / POSTAGEM */
 .post-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -82,45 +95,51 @@ main {
     margin-bottom: 0.5rem;
 }
 
-.post-header .subtitulo {
+.subtitulo {
     color: #8b949e;
     font-size: 1.1rem;
 }
 
 .post-content h2 {
-    color: #3fb950;
+    color: #2ea043;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #21262d;
+    border-bottom: 1px solid #30363d;
     padding-bottom: 0.5rem;
 }
 
 .post-content p {
-    margin-bottom: 1.2rem;
-    color: #c9d1d9;
+    color: #e6edf3;
     font-size: 1.05rem;
+    margin-bottom: 1.2rem;
 }
 
 .post-content ul {
     margin-bottom: 1.5rem;
     padding-left: 1.5rem;
+    color: #e6edf3;
 }
 
 .post-content li {
     margin-bottom: 0.5rem;
-    color: #c9d1d9;
 }
 
-blockquote {
+/* STATUS DA HORTA (SEM PLANTIO AINDA) */
+.status-alerta {
     background-color: #0d1117;
-    border-left: 4px solid #2ea043;
-    padding: 1rem;
+    border: 1px solid #2ea043;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
     margin: 1.5rem 0;
-    font-style: italic;
-    color: #8b949e;
+    color: #ffffff;
 }
 
-/* FIGURAS E IMAGENS */
+.status-alerta span {
+    color: #2ea043;
+    font-weight: bold;
+}
+
+/* FOTOS E GALERIA */
 figure {
     margin: 2rem 0;
     text-align: center;
@@ -128,7 +147,6 @@ figure {
 
 figure img {
     width: 100%;
-    max-width: 100%;
     border-radius: 8px;
     border: 1px solid #30363d;
 }
@@ -140,7 +158,6 @@ figcaption {
     font-style: italic;
 }
 
-/* GALERIA DE FOTOS DUPLA */
 .galeria-dupla {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -158,21 +175,13 @@ footer {
     padding: 2rem;
     background-color: #161b22;
     color: #8b949e;
-    border-top: 1px solid #30363d;
+    border-top: 2px solid #2ea043;
     margin-top: 3rem;
 }
 
-/* RESPONSIVIDADE PARA CELULAR */
-@media (max-width: 600px) {
+/* RESPONSIVO PARA CELULARES */
+@media (max-width: 700px) {
     .galeria-dupla {
         grid-template-columns: 1fr;
-    }
-    
-    .post-container {
-        padding: 1.2rem;
-    }
-
-    .post-header h1 {
-        font-size: 1.6rem;
     }
 }
