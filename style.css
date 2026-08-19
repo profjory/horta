@@ -1,4 +1,13 @@
-/* RESET E REGRA GLOBAL */
+/* RESET BÁSICO E CORES */
+:root {
+    --fundo-pagina: #f4f7f4;
+    --texto-escuro: #2c3e50;
+    --verde-agro: #2e7d32;
+    --degrade-inicio: #1b2a1c; /* Preto esverdeado */
+    --degrade-fim: #0d47a1;     /* Mix escuro para degrade dos quadros */
+    --degrade-card: linear-gradient(135deg, #111e12 0%, #1e3a1f 100%);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,306 +15,281 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* DEGRADÊ ESCURO NO FUNDO DA PÁGINA */
-html, body {
-    background: linear-gradient(135deg, #0f172a 0%, #064e3b 50%, #022c22 100%) fixed !important;
-    color: #ffffff !important;
-    min-height: 100vh;
+body {
+    background-color: var(--fundo-pagina); /* FUNDO CLARO */
+    color: var(--texto-escuro);
     line-height: 1.6;
 }
 
-/* NAVEGAÇÃO COM VIDRO FOSCO / DEGRADÊ */
+/* CABEÇALHO */
 header {
-    background: rgba(15, 23, 42, 0.9);
-    backdrop-filter: blur(10px);
-    padding: 1.2rem 5%;
+    background: #111e12;
+    color: #fff;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #10b981;
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
-.logo {
-    font-size: 1.3rem;
+header .logo {
+    font-size: 1.4rem;
     font-weight: bold;
-    color: #34d399;
+    color: #81c784;
 }
 
-nav ul {
+header nav ul {
     display: flex;
     list-style: none;
-    gap: 15px;
+    gap: 1.2rem;
 }
 
-nav a {
-    color: #ffffff;
+header nav a {
+    color: #fff;
     text-decoration: none;
-    font-size: 0.95rem;
     font-weight: 500;
     transition: color 0.3s;
 }
 
-nav a:hover {
-    color: #34d399;
+header nav a:hover {
+    color: #81c784;
 }
 
-/* CARDS COM DEGRADÊ SUAVE E BORDA BRILHANTE */
+/* ESTRUTURA E GRIDS */
 main {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 2rem auto;
-    padding: 0 20px;
+    padding: 0 1rem;
 }
 
-.card-preto {
-    background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95)) !important;
-    border: 1px solid rgba(16, 185, 129, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    border-radius: 16px;
-    padding: 2rem;
-    margin-bottom: 2.5rem;
-    color: #ffffff;
+.container {
+    margin-bottom: 3.5rem;
 }
 
-.card-preto h2 {
-    color: #34d399;
-    font-size: 1.8rem;
-    margin-top: 0.3rem;
-    margin-bottom: 0.5rem;
-}
-
-.subtitulo-verde {
-    color: #34d399;
-    font-size: 0.85rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.descricao-secao {
-    color: #cbd5e1;
+.titulo-secao {
+    text-align: center;
     margin-bottom: 1.5rem;
+    color: #1b2a1c;
+    font-size: 1.8rem;
 }
 
-/* COLÉGIO CQC DEGRADÊ DE DESTAQUE */
-.colegio-detalhes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
-    margin-top: 1.5rem;
-    background: linear-gradient(135deg, #064e3b, #0f172a);
-    padding: 1.2rem;
-    border-radius: 10px;
-    border-left: 4px solid #34d399;
-}
-
-/* CARDS DE STATUS DA HORTA */
-.cards-status-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-}
-
-.card-status {
-    background: rgba(15, 23, 42, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 1.5rem;
-}
-
-.card-status .icone {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-.card-status h3 {
+/* QUADROS COM DEGRADÊ PRETO/VERDE */
+.card-degrade {
+    background: var(--degrade-card); /* DEGRADÊ DE PRETO E VERDE */
     color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    border: 1px solid #2e5a31;
+}
+
+.card-degrade h1, .card-degrade h2, .card-degrade h3 {
+    color: #a5d6a7;
     margin-bottom: 0.5rem;
 }
 
-.card-status p {
-    color: #94a3b8;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+.card-degrade p {
+    color: #e0e0e0;
 }
 
-.barra-progresso {
-    background-color: #334155;
-    height: 8px;
-    border-radius: 4px;
-    margin-top: 1rem;
-    overflow: hidden;
+.grid-2col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
 }
 
-.progresso {
-    background: linear-gradient(90deg, #059669, #34d399);
-    height: 100%;
+.grid-3col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
 }
 
-.porcentagem {
-    font-size: 0.8rem;
-    color: #34d399;
-    display: block;
-    margin-top: 0.3rem;
+/* HERO SECTION (TURMA E MASCOTES) */
+.hero-section {
+    margin-bottom: 3rem;
 }
 
-/* CONTEÚDO DO BLOG */
-.post-header {
+.hero-card {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.post-header h1 {
-    font-size: 2rem;
-    color: #34d399;
-    margin-bottom: 0.5rem;
+.mascotes-container h2 {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-.subtitulo {
-    color: #cbd5e1;
-    font-size: 1rem;
+.mascotes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
 }
 
-.post-content h2 {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 0.5rem;
-    margin-top: 2rem;
-}
-
-.post-content p, .post-content li {
-    color: #e2e8f0;
-    font-size: 1.05rem;
-}
-
-.post-content ul {
-    margin-bottom: 1.5rem;
-    padding-left: 1.5rem;
-}
-
-.post-content li {
-    margin-bottom: 0.5rem;
-}
-
-/* FOTOS E GALERIA */
-figure {
-    margin: 2rem 0;
+.mascote-card {
     text-align: center;
 }
 
-figure img {
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-figcaption {
-    font-size: 0.9rem;
-    color: #cbd5e1;
-    margin-top: 0.5rem;
-    font-style: italic;
-}
-
-.galeria-dupla {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin: 2rem 0;
-}
-
-.galeria-dupla figure {
-    margin: 0;
-}
-
-blockquote {
-    background: rgba(6, 78, 59, 0.4);
-    border-left: 4px solid #34d399;
-    padding: 1rem;
-    margin: 1.5rem 0;
-    font-style: italic;
-    color: #cbd5e1;
-    border-radius: 0 8px 8px 0;
-}
-
-/* CARDS DE PROFESSORES E MASCOTES COM DEGRADÊ */
-.grid-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* IMAGENS E EFEITO ZOOM (LIGHTBOX) */
+.img-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
     margin-top: 1rem;
+    cursor: pointer;
 }
 
-.card-pessoa {
-    background: rgba(15, 23, 42, 0.8);
-    border: 1px solid rgba(52, 211, 153, 0.2);
-    border-radius: 14px;
-    padding: 1.5rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* MANTÉM IMAGENS DE TAMANHOS DIFERENTES BEM PARECIDAS E ALINHADAS */
+    display: block;
     transition: transform 0.3s ease;
 }
 
-.card-pessoa:hover {
-    transform: translateY(-5px);
+.img-container:hover img {
+    transform: scale(1.04);
 }
 
-.foto-container {
-    width: 130px;
-    height: 130px;
+.zoom-hint {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 3px 8px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+/* PADRONIZAÇÃO DE ALTURA DAS IMAGENS DO CAMPO E PROJETO */
+.img-fixed-height {
+    height: 240px;
+}
+
+.img-square {
+    height: 180px;
+}
+
+.img-circle {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    border: 3px solid #34d399;
-    overflow: hidden;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 15px rgba(52, 211, 153, 0.3);
+    margin: 0 auto;
+    border: 3px solid #81c784;
 }
 
-.foto-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* STATUS BADGES */
+.status-card {
+    text-align: center;
 }
-
-.card-pessoa h3 {
-    color: #ffffff;
-    font-size: 1.2rem;
+.status-icon {
+    font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
-
-.tag-funcao {
-    background: linear-gradient(90deg, #059669, #10b981);
-    color: #ffffff;
-    font-size: 0.8rem;
-    padding: 4px 14px;
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
     border-radius: 20px;
+    font-size: 0.85rem;
     font-weight: bold;
-    margin-bottom: 0.8rem;
+    margin: 0.5rem 0;
 }
+.badge-success { background: #2e7d32; color: #fff; }
+.badge-warning { background: #f57c00; color: #fff; }
+.badge-danger { background: #c62828; color: #fff; }
 
-.card-pessoa p {
-    color: #cbd5e1;
+/* PROFESSORES */
+.prof-card {
+    text-align: center;
+}
+.prof-card span {
+    color: #81c784;
     font-size: 0.9rem;
 }
 
-/* RODAPÉ */
-footer {
+/* SOBRE & BLOG */
+.colegio-card {
     text-align: center;
-    padding: 2rem;
-    background: rgba(15, 23, 42, 0.95);
-    color: #94a3b8;
-    border-top: 2px solid #10b981;
-    margin-top: 3rem;
+}
+.divisor {
+    border: 0;
+    height: 1px;
+    background: #2e5a31;
+    margin: 1.5rem 0;
+}
+.btn-blog {
+    display: inline-block;
+    background: #2e7d32;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    transition: background 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.btn-blog:hover {
+    background: #388e3c;
 }
 
-/* RESPONSIVIDADE */
-@media (max-width: 700px) {
-    .galeria-dupla {
-        grid-template-columns: 1fr;
-    }
+/* MODAL DE ZOOM DE IMAGEM */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-conteudo {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+}
+
+#legenda-modal {
+    margin: auto;
+    display: block;
+    width: 80%;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.fechar {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* RESPONSIVO PARA CELULAR */
+@media (max-width: 600px) {
     header {
         flex-direction: column;
-        gap: 10px;
+        gap: 0.5rem;
+    }
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    .img-fixed-height {
+        height: 180px;
     }
 }
