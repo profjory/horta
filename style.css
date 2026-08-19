@@ -1,4 +1,4 @@
-/* RESET E CORES GERAIS (PRETO, VERDE E BRANCO) */
+/* RESET E REGRA GLOBAL DE PALETA (PRETO, VERDE E BRANCO) */
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +6,15 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    background-color: #0d1117; /* Fundo Preto / Escuro */
-    color: #ffffff; /* Texto Branco */
+/* GARANTE QUE O FUNDO SEJA PRETO EM TODA A PÁGINA */
+html, body {
+    background-color: #0d1117 !important; /* Preto / Grafite Escuro */
+    color: #ffffff !important;            /* Texto Branco */
+    min-height: 100vh;
     line-height: 1.6;
 }
 
-/* NAVEGAÇÃO */
+/* NAVEGAÇÃO / CABEÇALHO */
 header {
     background-color: #161b22;
     padding: 1.2rem 5%;
@@ -28,7 +30,7 @@ header {
 .logo {
     font-size: 1.3rem;
     font-weight: bold;
-    color: #2ea043; /* Verde */
+    color: #2ea043;
 }
 
 nav ul {
@@ -48,7 +50,7 @@ nav a:hover {
     color: #2ea043;
 }
 
-/* LAYOUT PRINCIPAL */
+/* CONTAINERS E CARDS ESCUROS */
 main {
     max-width: 1000px;
     margin: 2rem auto;
@@ -56,14 +58,15 @@ main {
 }
 
 .card-preto {
-    background-color: #161b22; /* Card Preto/Escuro */
+    background-color: #161b22 !important; /* Card Escuro */
     border: 1px solid #30363d;
     border-radius: 12px;
     padding: 2rem;
     margin-bottom: 2.5rem;
+    color: #ffffff;
 }
 
-/* SEÇÃO SOBRE O COLÉGIO CQC */
+/* INFORMAÇÕES DO COLÉGIO CQC */
 .sobre-colegio h2 {
     color: #2ea043;
     font-size: 1.8rem;
@@ -83,7 +86,67 @@ main {
     border-left: 4px solid #2ea043;
 }
 
-/* SEÇÃO DO BLOG / POSTAGEM */
+/* SEÇÃO DE ACOMPANHAMENTO DE STATUS */
+.subtitulo-verde {
+    color: #2ea043;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.cards-status-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 1.5rem;
+}
+
+.card-status {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 1.5rem;
+    color: #ffffff;
+}
+
+.card-status .icone {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-status h3 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.card-status p {
+    color: #8b949e;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.barra-progresso {
+    background-color: #21262d;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.progresso {
+    background-color: #2ea043;
+    height: 100%;
+}
+
+.porcentagem {
+    font-size: 0.8rem;
+    color: #2ea043;
+    display: block;
+    margin-top: 0.3rem;
+}
+
+/* CONTEÚDO DO BLOG */
 .post-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -108,35 +171,18 @@ main {
     padding-bottom: 0.5rem;
 }
 
-.post-content p {
+.post-content p, .post-content li {
     color: #e6edf3;
     font-size: 1.05rem;
-    margin-bottom: 1.2rem;
 }
 
 .post-content ul {
     margin-bottom: 1.5rem;
     padding-left: 1.5rem;
-    color: #e6edf3;
 }
 
 .post-content li {
     margin-bottom: 0.5rem;
-}
-
-/* STATUS DA HORTA (SEM PLANTIO AINDA) */
-.status-alerta {
-    background-color: #0d1117;
-    border: 1px solid #2ea043;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    margin: 1.5rem 0;
-    color: #ffffff;
-}
-
-.status-alerta span {
-    color: #2ea043;
-    font-weight: bold;
 }
 
 /* FOTOS E GALERIA */
@@ -169,6 +215,15 @@ figcaption {
     margin: 0;
 }
 
+blockquote {
+    background-color: #0d1117;
+    border-left: 4px solid #2ea043;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #8b949e;
+}
+
 /* RODAPÉ */
 footer {
     text-align: center;
@@ -179,7 +234,7 @@ footer {
     margin-top: 3rem;
 }
 
-/* RESPONSIVO PARA CELULARES */
+/* RESPONSIVIDADE */
 @media (max-width: 700px) {
     .galeria-dupla {
         grid-template-columns: 1fr;
