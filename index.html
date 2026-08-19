@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horta CQC Agro 2026</title>
-    <!-- Vinculado ao seu style.css -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,7 +17,7 @@
                 <li><a href="#projeto-futuro">O Projeto</a></li>
                 <li><a href="#campo">Campo</a></li>
                 <li><a href="#status">Status</a></li>
-                <li><a href="#blogs-alunos">Blogs</a></li>
+                <li><a href="alunos.html">Blogs</a></li>
                 <li><a href="#professores">Professores</a></li>
                 <li><a href="#colegio">Sobre</a></li>
             </ul>
@@ -26,7 +25,7 @@
     </header>
 
     <main>
-        <!-- 1. FOTO DA TURMA E MASCOTES (PRIMEIRA COISA A SER VISTA) -->
+        <!-- 1. TURMA E MASCOTES -->
         <section id="inicio" class="hero-section">
             <div class="card-degrade hero-card">
                 <h1>1º D AGRO — CQC 2026</h1>
@@ -131,69 +130,15 @@
             </div>
         </section>
 
-        <!-- 5. BLOGS DOS ALUNOS (ENTRE STATUS E PROFESSORES) -->
+        <!-- 5. BLOGS DOS ALUNOS (CHAMA A PÁGINA EXCLUSIVA) -->
         <section id="blogs-alunos" class="container">
-            <div class="card-degrade colegio-card">
-                <h2 class="titulo-secao" style="color: #81c784; margin-bottom: 0.5rem;">📝 Blogs e Diários de Campo dos Alunos</h2>
-                <p style="color: #e0e0e0; margin-bottom: 1rem;">Acompanhe as publicações e o aprendizado individual dos estudantes do 1º D Agro:</p>
+            <div class="card-degrade colegio-card" style="text-align: center;">
+                <h2 style="color: #81c784; margin-bottom: 0.8rem;">📝 Blogs e Diários de Campo dos Alunos</h2>
+                <p style="color: #e0e0e0; margin-bottom: 1.5rem;">Confira os artigos, registros de aula e acompanhamentos individuais produzidos pelos estudantes do 1º D Agro.</p>
                 
-                <div class="blog-grid-alunos">
-                    
-                    <!-- BLOG DO RAFAEL -->
-                    <div class="card-aluno">
-                        <h4>👨‍🌾 Blog do Rafael</h4>
-                        <p>Relatos e acompanhamento das práticas agrícolas.</p>
-                        <a href="https://santosgodoymaria-source.github.io/blog-horta-Rafael/" target="_blank" rel="noopener noreferrer" class="btn-blog">
-                            🚀 Acessar Blog do Rafael
-                        </a>
-                    </div>
-
-                    <!-- BLOG DA MARIA EDUARDA -->
-                    <div class="card-aluno">
-                        <h4>👩‍🌾 Blog da Maria Eduarda</h4>
-                        <p>Diários de campo e projetos do curso técnico.</p>
-                        <a href="https://santosgodoymaria-source.github.io/blog-horta-Maria/" target="_blank" rel="noopener noreferrer" class="btn-blog">
-                            🚀 Acessar Blog da Maria
-                        </a>
-                    </div>
-
-                    <!-- BLOG DO(A) NOVO(A) ALUNO(A) -->
-<div class="card-aluno">
-    <h4>👨‍🌾 Blog do [Nome do Aluno]</h4>
-    <p>Relatos e acompanhamento das práticas agrícolas.</p>
-    <a href="COLE_O_LINK_DO_GITHUB_AQUI" target="_blank" rel="noopener noreferrer" class="btn-blog">
-        🚀 Acessar Blog do [Nome do Aluno]
-    </a>
-</div>
-
-                    <!-- BLOG DO(A) NOVO(A) ALUNO(A) -->
-<div class="card-aluno">
-    <h4>👨‍🌾 Blog do [Nome do Aluno]</h4>
-    <p>Relatos e acompanhamento das práticas agrícolas.</p>
-    <a href="COLE_O_LINK_DO_GITHUB_AQUI" target="_blank" rel="noopener noreferrer" class="btn-blog">
-        🚀 Acessar Blog do [Nome do Aluno]
-    </a>
-</div>     
-                    
-  <!-- BLOG DO(A) NOVO(A) ALUNO(A) -->
-<div class="card-aluno">
-    <h4>👨‍🌾 Blog do [Nome do Aluno]</h4>
-    <p>Relatos e acompanhamento das práticas agrícolas.</p>
-    <a href="COLE_O_LINK_DO_GITHUB_AQUI" target="_blank" rel="noopener noreferrer" class="btn-blog">
-        🚀 Acessar Blog do [Nome do Aluno]
-    </a>
-</div>
-
-                    <!-- BLOG DO(A) NOVO(A) ALUNO(A) -->
-<div class="card-aluno">
-    <h4>👨‍🌾 Blog do [Nome do Aluno]</h4>
-    <p>Relatos e acompanhamento das práticas agrícolas.</p>
-    <a href="COLE_O_LINK_DO_GITHUB_AQUI" target="_blank" rel="noopener noreferrer" class="btn-blog">
-        🚀 Acessar Blog do [Nome do Aluno]
-    </a>
-</div>                 
-                    
-                </div>
+                <a href="alunos.html" class="btn-blog" style="font-size: 1.05rem; padding: 12px 28px;">
+                    👥 Ver Lista Completa de Blogs dos Alunos →
+                </a>
             </div>
         </section>
 
@@ -225,7 +170,7 @@
             </div>
         </section>
 
-        <!-- 7. SOBRE O COLÉGIO CQC (ÚLTIMA SEÇÃO) -->
+        <!-- 7. SOBRE O COLÉGIO CQC -->
         <section id="colegio" class="container">
             <div class="card-degrade colegio-card">
                 <h2>🏫 Colégio Estadual Conselheiro Quielse Crisóstomo da Silva (CQC)</h2>
@@ -238,7 +183,7 @@
         <p>© 2026 Blog Horta CQC Agro — Bocaiúva do Sul (PR)</p>
     </footer>
 
-    <!-- MODAL PARA EXPANDIR AS FOTOS AO CLICAR -->
+    <!-- MODAL DE ZOOM -->
     <div id="modal-imagem" class="modal">
         <span class="fechar">&times;</span>
         <img class="modal-conteudo" id="img-ampliada">
