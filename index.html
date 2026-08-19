@@ -3,223 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Horta CQC Agro</title>
+    <title>Horta CQC Agro 2026</title>
+    <!-- Nome do CSS ajustado para style.css -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- CABEÇALHO -->
     <header>
         <div class="logo">🌱 Horta CQC Agro</div>
         <nav>
             <ul>
-                <li><a href="#colegio">O Colégio</a></li>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#projeto-futuro">O Projeto</a></li>
+                <li><a href="#campo">Campo</a></li>
                 <li><a href="#status">Status</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#equipe">Professores</a></li>
-                <li><a href="#mascotes">Mascotes</a></li>
+                <li><a href="#professores">Professores</a></li>
+                <li><a href="#colegio">Sobre & Blog</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-
-        <!-- SEÇÃO 1: SOBRE O COLÉGIO CQC -->
-        <section id="colegio" class="card-preto sobre-colegio">
-            <h2>🏫 Colégio Estadual Conselheiro Quielse Crisóstomo da Silva (CQC)</h2>
-            <p>
-                Localizado em <strong>Bocaiúva do Sul (PR)</strong>, o Colégio CQC é referência na educação pública da região. 
-                Com a implantação do curso de <strong>Técnico em Agronegócio</strong>, a comunidade escolar une teoria e prática 
-                no desenvolvimento do projeto da horta escolar sustentável.
-            </p>
-
-            <div class="colegio-detalhes">
-                <div><strong>📍 Localização:</strong> Bocaiúva do Sul - PR</div>
-                <div><strong>🌾 Curso Técnico:</strong> Técnico em Agronegócio (1º D AGRO)</div>
-                <div><strong>🌱 Projeto Ativo:</strong> Horta Escolar TECAGRO CQC</div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO 2: STATUS REAL DO CULTIVO -->
-        <section id="status" class="card-preto">
-            <span class="subtitulo-verde">ACOMPANHAMENTO</span>
-            <h2>Status Atual da Horta</h2>
-            <p class="descricao-secao">Acompanhe o andamento real do projeto. A página será atualizada conforme a turma avançar nas etapas.</p>
-
-            <div class="cards-status-container">
-                
-                <div class="card-status">
-                    <div class="icone">📏</div>
-                    <h3>Demarcação e Piquetagem</h3>
-                    <p><strong>Status:</strong> Concluído</p>
-                    <p>Medição de topografia, piquetagem e passagem de linhas no terreno.</p>
-                    <div class="barra-progresso">
-                        <div class="progresso" style="width: 100%;"></div>
-                    </div>
-                    <span class="porcentagem">100% Concluído</span>
-                </div>
-
-                <div class="card-status">
-                    <div class="icone">⛏️</div>
-                    <h3>Preparo do Solo</h3>
-                    <p><strong>Status:</strong> Em breve</p>
-                    <p>Aguardando início do revolvimento e adubação da terra.</p>
-                    <div class="barra-progresso">
-                        <div class="progresso" style="width: 15%;"></div>
-                    </div>
-                    <span class="porcentagem">Em planejamento</span>
-                </div>
-
-                <div class="card-status">
-                    <div class="icone">🌱</div>
-                    <h3>Plantio das Mudas</h3>
-                    <p><strong>Status:</strong> Aguardando</p>
-                    <p>Nenhuma espécie plantada no momento. Área em estruturação.</p>
-                    <div class="barra-progresso">
-                        <div class="progresso" style="width: 0%;"></div>
-                    </div>
-                    <span class="porcentagem">0% (Não iniciado)</span>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- SEÇÃO 3: POSTS DO BLOG COM AS IMAGENS -->
-        <article id="blog" class="card-preto">
-            <header class="post-header">
-                <h1>Projeto Horta TECAGRO CQC: O Futuro Agro Ganha Forma!</h1>
-                <p class="subtitulo">Acompanhe as etapas de planejamento, delimitação e o projeto do nosso espaço.</p>
-            </header>
-
-            <section class="post-content">
-                <p>
-                    Com as atividades do curso de Técnico em Agronegócio, os estudantes do <strong>1º D AGRO</strong> iniciaram os trabalhos para estruturar a horta do Colégio CQC.
-                </p>
-
-                <figure>
+        <!-- 1. FOTO DA TURMA E MASCOTES -->
+        <section id="inicio" class="hero-section">
+            <div class="card-degrade hero-card">
+                <h1>1º D AGRO — CQC 2026</h1>
+                <p>Bem-vindos ao projeto da Horta Escolar do Curso Técnico em Agronegócio!</p>
+                <div class="img-container zoomable">
                     <img src="img/turma-1d-agro.jpg" alt="Turma do 1º D Agro">
-                    <figcaption>Estudantes do 1º D AGRO reunidos no Colégio CQC com a mascote do curso.</figcaption>
-                </figure>
-
-                <h2>🟢 1. Demarcação do Terreno e Piquetagem</h2>
-                <p>
-                    A primeira fase prática consistiu na medição de campo, alinhamento topográfico e piquetagem com barbantes para delimitar a extensão dos canteiros e áreas de circulação.
-                </p>
-
-                <div class="galeria-dupla">
-                    <figure>
-                        <img src="img/demarcacao-muro.jpg" alt="Demarcação dos canteiros ao lado do muro">
-                        <figcaption>Piquetes demarcando o alinhamento das áreas ao lado do muro.</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="img/demarcacao-rampa.jpg" alt="Demarcação no terreno em aclive">
-                        <figcaption>Alinhamento de topografia na área inclinada do terreno.</figcaption>
-                    </figure>
+                    <span class="zoom-hint">🔍 Clique para ampliar</span>
                 </div>
+            </div>
 
-                <h2>🗺️ 2. Mapeamento Aéreo (Área de 570 m²)</h2>
-                <p>
-                    Através de demarcação aérea, delimitamos uma área total de <strong>570 m²</strong> para o projeto Horta TECAGRO CQC, subdividida em setores estratégicos:
-                </p>
-                <ul>
-                    <li><strong>Área A (150 m²):</strong> Destinada a árvores frutíferas e estruturas trepadeiras.</li>
-                    <li><strong>Área B (330 m²):</strong> Canteiros para hortaliças e cultivos de grãos.</li>
-                    <li><strong>Área C (90 m²):</strong> Área temporariamente interditada/apoio.</li>
-                </ul>
+            <div class="mascotes-container">
+                <h2>🐷 Nossos Mascotes</h2>
+                <div class="mascotes-grid">
+                    <div class="card-degrade mascote-card">
+                        <div class="img-container zoomable img-square">
+                            <img src="img/banha.png" alt="Mascote Banha">
+                            <span class="zoom-hint">🔍 Ampliar</span>
+                        </div>
+                        <h3>Banha</h3>
+                        <p>Mascote Oficial / Suinocultura</p>
+                    </div>
+                    <div class="card-degrade mascote-card">
+                        <div class="img-container zoomable img-square">
+                            <img src="img/toicinho.png" alt="Mascote Toicinho">
+                            <span class="zoom-hint">🔍 Ampliar</span>
+                        </div>
+                        <h3>Toicinho</h3>
+                        <p>Companheiro das atividades de campo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <figure>
-                    <img src="img/mapa-aereo.jpg" alt="Mapa aéreo da Horta CQC">
-                    <figcaption>Delimitação geográfica da Horta TECAGRO na área do colégio (570 m²).</figcaption>
-                </figure>
+        <!-- 2. COMO VAI FICAR (PROJETOS E MAPEAMENTO) -->
+        <section id="projeto-futuro" class="container">
+            <h2 class="titulo-secao">🗺️ Como Vai Ficar o Espaço</h2>
+            <div class="grid-2col">
+                <div class="card-degrade">
+                    <h3>Projeção Futura da Horta (3D)</h3>
+                    <p>Planejamento espacial com canteiros, estufas e áreas de cultivo.</p>
+                    <div class="img-container zoomable img-fixed-height">
+                        <img src="img/projeto-futuro.jpg" alt="Projeto futuro da horta em 3D">
+                        <span class="zoom-hint">🔍 Clique para ampliar</span>
+                    </div>
+                </div>
+                <div class="card-degrade">
+                    <h3>Mapeamento Aéreo (570 m²)</h3>
+                    <p>Divisão em setores: Frutíferas (Área A), Hortaliças (Área B) e Apoio (Área C).</p>
+                    <div class="img-container zoomable img-fixed-height">
+                        <img src="img/mapa-aereo.jpg" alt="Mapa aéreo da Horta CQC">
+                        <span class="zoom-hint">🔍 Clique para ampliar</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <h2>🌾 3. Projeção Futura do Espaço</h2>
-                <p>
-                    Elaboramos um planejamento espacial detalhado de como ficará o local quando o plantio for realizado. O projeto prevê canteiros de hortaliças, milho, feijão, erva-mate, café, além de estufas de morango suspenso e canteiros de temperos.
-                </p>
+        <!-- 3. PREPARAÇÃO DO SOLO E CAMPO -->
+        <section id="campo" class="container">
+            <h2 class="titulo-secao">⛏️ Atividades de Campo & Terreno</h2>
+            <div class="grid-2col">
+                <div class="card-degrade">
+                    <h3>Demarcação Rente ao Muro</h3>
+                    <p>Alinhamento dos canteiros e marcação com piquetes e barbantes.</p>
+                    <div class="img-container zoomable img-fixed-height">
+                        <img src="img/demarcacao-muro.jpg" alt="Demarcação dos canteiros ao lado do muro">
+                        <span class="zoom-hint">🔍 Clique para ampliar</span>
+                    </div>
+                </div>
+                <div class="card-degrade">
+                    <h3>Medição em Aclive</h3>
+                    <p>Verificação de níveis topográficos na área inclinada do terreno.</p>
+                    <div class="img-container zoomable img-fixed-height">
+                        <img src="img/demarcacao-rampa.jpg" alt="Demarcação no terreno em aclive">
+                        <span class="zoom-hint">🔍 Clique para ampliar</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <figure>
-                    <img src="img/projeto-futuro.jpg" alt="Projeto futuro da horta 3D">
-                    <figcaption>Maquete/Planta humanizada ilustrando o projeto concluído.</figcaption>
-                </figure>
+        <!-- 4. STATUS DA HORTA -->
+        <section id="status" class="container">
+            <h2 class="titulo-secao">📊 Status do Projeto</h2>
+            <div class="grid-3col">
+                <div class="card-degrade status-card">
+                    <div class="status-icon">📏</div>
+                    <h3>Demarcação e Piquetagem</h3>
+                    <span class="badge badge-success">Concluído (100%)</span>
+                    <p>Medição e demarcação dos canteiros finalizadas.</p>
+                </div>
+                <div class="card-degrade status-card">
+                    <div class="status-icon">⛏️</div>
+                    <h3>Preparo do Solo</h3>
+                    <span class="badge badge-warning">Em Breve</span>
+                    <p>Aguardando revolvimento e adubação da terra.</p>
+                </div>
+                <div class="card-degrade status-card">
+                    <div class="status-icon">🌱</div>
+                    <h3>Plantio das Mudas</h3>
+                    <span class="badge badge-danger">Aguardando (0%)</span>
+                    <p>Início previsto após a preparação dos canteiros.</p>
+                </div>
+            </div>
+        </section>
 
-                <blockquote>
-                    Acompanhe o nosso blog para ver o desenvolvimento das próximas fases: preparo do solo, adubação e o início do plantio! 🌱
-                </blockquote>
-            </section>
-        </article>
-
-        <!-- SEÇÃO 4: PROFESSORES RESPONSÁVEIS -->
-        <section id="equipe" class="card-preto">
-            <span class="subtitulo-verde">EQUIPE</span>
-            <h2>Professores Responsáveis</h2>
-            <p class="descricao-secao">Professores responsáveis pelas atividades da horta e pelo desenvolvimento do blog.</p>
-
-            <div class="grid-cards">
-                
-                <div class="card-pessoa">
-                    <div class="foto-container">
-                        <img src="img/francelize.png" alt="Francelize Chiarotti">
+        <!-- 5. PROFESSORES RESPONSÁVEIS -->
+        <section id="professores" class="container">
+            <h2 class="titulo-secao">👨‍🏫 Professores Responsáveis</h2>
+            <div class="grid-3col">
+                <div class="card-degrade prof-card">
+                    <div class="img-container zoomable img-circle">
+                        <img src="img/francelize.png" alt="Professora Francelize">
                     </div>
                     <h3>Francelize Chiarotti</h3>
-                    <span class="tag-funcao">Projeto da horta</span>
-                    <p>Professora que acompanha as atividades práticas realizadas na horta.</p>
+                    <span>Projeto da Horta</span>
                 </div>
-
-                <div class="card-pessoa">
-                    <div class="foto-container">
-                        <img src="img/carlos.png" alt="Carlos Daniel Castro Benatto">
+                <div class="card-degrade prof-card">
+                    <div class="img-container zoomable img-circle">
+                        <img src="img/carlos.png" alt="Professor Carlos Daniel">
                     </div>
-                    <h3>Carlos Daniel Castro Benatto</h3>
-                    <span class="tag-funcao">Projeto da horta</span>
-                    <p>Professor que acompanha as atividades práticas realizadas na horta.</p>
+                    <h3>Carlos Daniel C. Benatto</h3>
+                    <span>Projeto da Horta</span>
                 </div>
-
-                <div class="card-pessoa">
-                    <div class="foto-container">
-                        <!-- FOTO CONFIGURADA COMO marjory.png -->
-                        <img src="img/marjory.png" alt="Márjory Dal'Lin">
+                <div class="card-degrade prof-card">
+                    <div class="img-container zoomable img-circle">
+                        <img src="img/marjory.png" alt="Professora Márjory">
                     </div>
                     <h3>Márjory Dal'Lin</h3>
-                    <span class="tag-funcao">Educação Digital</span>
-                    <p>Professora responsável pela criação e pelo desenvolvimento do blog com os estudantes.</p>
+                    <span>Educação Digital</span>
                 </div>
-
             </div>
         </section>
 
-        <!-- SEÇÃO 5: MASCOTES DO PROJETO -->
-        <section id="mascotes" class="card-preto">
-            <span class="subtitulo-verde">PROJETO AGRO</span>
-            <h2>Nossos Mascotes</h2>
-            <p class="descricao-secao">Os mascotes que representam a identidade da nossa turma de Agronegócio.</p>
-
-            <div class="grid-cards">
+        <!-- 6. SOBRE O COLÉGIO + LINK DO BLOG DOS ALUNOS -->
+        <section id="colegio" class="container">
+            <div class="card-degrade colegio-card">
+                <h2>🏫 Colégio Estadual Conselheiro Quielse Crisóstomo da Silva (CQC)</h2>
+                <p>Localizado em <strong>Bocaiúva do Sul (PR)</strong>, o Colégio CQC une teoria e prática na formação técnica do agronegócio.</p>
                 
-                <div class="card-pessoa">
-                    <div class="foto-container">
-                        <img src="img/banha.png" alt="Mascote Banha">
-                    </div>
-                    <h3>Banha</h3>
-                    <span class="tag-funcao">Mascote Oficial</span>
-                    <p>Representante do setor de suinocultura e mascote do Agro CQC.</p>
-                </div>
+                <hr class="divisor">
 
-                <div class="card-pessoa">
-                    <div class="foto-container">
-                        <img src="img/toicinho.png" alt="Mascote Toicinho">
-                    </div>
-                    <h3>Toicinho</h3>
-                    <span class="tag-funcao">Mascote Oficial</span>
-                    <p>Companheiro das atividades no campo e mascote símbolo da turma.</p>
+                <div class="blog-link-box">
+                    <h3>📝 Acompanhe os Diários de Campo!</h3>
+                    <p>Confira os artigos, diários de bordo e relatos escritos pelos estudantes do 1º D Agro:</p>
+                    <a href="https://profjory.github.io/horta/" target="_blank" class="btn-blog">
+                        🚀 Acessar o Blog dos Alunos
+                    </a>
                 </div>
-
             </div>
         </section>
-
     </main>
 
     <footer>
-        <p>&copy; 2026 Blog Horta CQC Agro — Colégio Estadual Conselheiro Quielse Crisóstomo da Silva (Bocaiúva do Sul - PR)</p>
+        <p>© 2026 Blog Horta CQC Agro — Bocaiúva do Sul (PR)</p>
     </footer>
 
+    <!-- MODAL PARA EXPANDIR AS FOTOS -->
+    <div id="modal-imagem" class="modal">
+        <span class="fechar">&times;</span>
+        <img class="modal-conteudo" id="img-ampliada">
+        <div id="legenda-modal"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
