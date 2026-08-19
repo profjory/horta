@@ -1,353 +1,178 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+/* RESET E ESTILOS GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Blog coletivo da Horta CQC Agro.">
-  <title>Blog Horta CQC Agro</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
+body {
+    background-color: #0d1117; /* Fundo escuro restaurado */
+    color: #e6edf3;
+    line-height: 1.6;
+}
 
-<body>
+/* CABEÇALHO */
+header {
+    background-color: #161b22;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #30363d;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-  <!-- CABEÇALHO -->
-  <header class="cabecalho" id="inicio">
-    <nav class="navegacao container">
-      <a href="#inicio" class="logo">
-        <span class="logo-icone">🌱</span>
-        <span>Horta CQC Agro</span>
-      </a>
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2ea043;
+}
 
-      <button class="botao-menu" id="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false">
-        ☰
-      </button>
+.logo img {
+    width: 35px;
+    height: 35px;
+}
 
-      <ul class="menu" id="menu">
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#projeto">O projeto</a></li>
-        <li><a href="#relatos">Blogs dos Alunos</a></li>
-        <li><a href="#plantamos">O que plantamos</a></li>
-        <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#equipe">Equipe</a></li>
-      </ul>
-    </nav>
-  </header>
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
 
-  <main>
+nav a {
+    color: #c9d1d9;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
 
-    <!-- BANNER PRINCIPAL -->
-    <section class="banner">
-      <div class="container banner-conteudo">
-        <div class="banner-texto">
-          <span class="etiqueta">
-            1º ano do Ensino Médio Técnico em Agronegócio
-          </span>
-          <h1>
-            Cultivando conhecimento, experiências e histórias
-          </h1>
-          <p>
-            Um portal coletivo para conectar e divulgar os blogs individuais dos estudantes sobre as atividades na horta da escola.
-          </p>
-          <div class="banner-botoes">
-            <a href="#relatos" class="botao botao-principal">
-              Conhecer os Blogs
-            </a>
-            <a href="#projeto" class="botao botao-secundario">
-              Conhecer o projeto
-            </a>
-          </div>
-        </div>
+nav a:hover {
+    color: #2ea043;
+}
 
-        <!-- MASCOTES -->
-        <div class="mascotes">
-          <article class="cartao-mascote">
-            <img src="img/banha.png" alt="Banha, mascote da turma">
-            <div>
-              <strong>Banha</strong>
-              <p>“Vamos acompanhar cada etapa da nossa horta!”</p>
-            </div>
-          </article>
+/* CONTEÚDO PRINCIPAL */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
 
-          <article class="cartao-mascote">
-            <img src="img/toicinho.png" alt="Toicinho, mascote da turma">
-            <div>
-              <strong>Toicinho</strong>
-              <p>“Sempre tem uma novidade crescendo por aqui!”</p>
-            </div>
-          </article>
-        </div>
-      </div>
-      <div class="onda"></div>
-    </section>
+.post-container {
+    background-color: #161b22;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
 
-    <!-- CONTADORES -->
-    <section class="numeros">
-      <div class="container grade-numeros">
-        <article>
-          <span id="total-relatos">2</span>
-          <p>blogs cadastrados</p>
-        </article>
-        <article>
-          <span id="total-semanas">0</span>
-          <p>semanas registradas</p>
-        </article>
-        <article>
-          <span id="total-plantas">0</span>
-          <p>cultivos acompanhados</p>
-        </article>
-        <article>
-          <span id="total-fotos">0</span>
-          <p>fotos publicadas</p>
-        </article>
-      </div>
-    </section>
+.post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
-    <!-- SOBRE O PROJETO -->
-    <section class="secao" id="projeto">
-      <div class="container duas-colunas">
-        <div>
-          <span class="subtitulo">Sobre o projeto</span>
-          <h2>Da terra para a tela</h2>
-          <p>
-            O projeto une as atividades práticas realizadas na horta com as aulas de Educação Digital.
-          </p>
-          <p>
-            Cada estudante cria seu próprio blog para registrar de forma autônoma suas observações, fotos e aprendizados ao longo da experiência.
-          </p>
-          <p>
-            Aqui no blog principal reunimos os links de direcionamento para que todos possam acessar e acompanhar os blogs de cada aluno da turma.
-          </p>
-        </div>
+.post-header h1 {
+    font-size: 2.2rem;
+    color: #2ea043;
+    margin-bottom: 0.5rem;
+}
 
-        <aside class="caixa-destaque">
-          <span class="icone-destaque">💡</span>
-          <div>
-            <h3>Objetivos do blog</h3>
-            <ul>
-              <li>Registrar a evolução da horta de forma individual.</li>
-              <li>Desenvolver a escrita e a criatividade.</li>
-              <li>Incentivar a observação das atividades práticas.</li>
-              <li>Aplicar conhecimentos de HTML, CSS e publicação Web.</li>
-              <li>Compartilhar as experiências com a comunidade escolar.</li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </section>
+.post-header .subtitulo {
+    color: #8b949e;
+    font-size: 1.1rem;
+}
 
-    <!-- BLOGS DOS ALUNOS -->
-    <section class="secao secao-escura" id="relatos">
-      <div class="container">
-        <div class="titulo-secao">
-          <div>
-            <span class="subtitulo">Diário da horta</span>
-            <h2>Blogs dos Estudantes</h2>
-          </div>
-        </div>
+.post-content h2 {
+    color: #3fb950;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #21262d;
+    padding-bottom: 0.5rem;
+}
 
-        <div class="grade-relatos" id="lista-relatos">
+.post-content p {
+    margin-bottom: 1.2rem;
+    color: #c9d1d9;
+    font-size: 1.05rem;
+}
 
-          <!-- BLOG DO RAFAEL MOREIRA -->
-          <article class="relato">
-            <div class="relato-imagem">
-              <img src="img/horta-semana-1.jpg" alt="Blog do Rafael Moreira">
-              <span class="categoria">1º ano</span>
-            </div>
-            <div class="relato-conteudo">
-              <h3>Blog da Horta — Rafael Moreira</h3>
-              <p>
-                Acompanhe o blog do estudante Rafael Moreira com seus registros e experiências no cultivo da horta escolar.
-              </p>
-              <footer>
-                <span class="autor">Autor: Rafael Moreira</span>
-                <a href="https://santosgodoymaria-source.github.io/blog-horta/" target="_blank" rel="noopener noreferrer" class="botao-link">
-                  Acessar Blog ↗
-                </a>
-              </footer>
-            </div>
-          </article>
+.post-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
 
-          <!-- BLOG DA MARIA EDUARDA GODOY SANTOS -->
-          <article class="relato">
-            <div class="relato-imagem">
-              <img src="img/horta-semana-2.jpg" alt="Horta da Maria">
-              <span class="categoria">1º ano</span>
-            </div>
-            <div class="relato-conteudo">
-              <h3>Horta da Maria — Maria Eduarda</h3>
-              <p>
-                Acompanhe o blog da estudante Maria Eduarda Godoy Santos com seus relatórios, observações e fotos sobre a horta.
-              </p>
-              <footer>
-                <span class="autor">Autora: Maria Eduarda Godoy Santos</span>
-                <a href="https://santosgodoymaria-source.github.io/horta-da-Maria/" target="_blank" rel="noopener noreferrer" class="botao-link">
-                  Acessar Blog ↗
-                </a>
-              </footer>
-            </div>
-          </article>
+.post-content li {
+    margin-bottom: 0.5rem;
+    color: #c9d1d9;
+}
 
-        </div>
-      </div>
-    </section>
+blockquote {
+    background-color: #0d1117;
+    border-left: 4px solid #2ea043;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #8b949e;
+}
 
-    <!-- O QUE PLANTAMOS -->
-    <section class="secao" id="plantamos">
-      <div class="container">
-        <div class="titulo-secao">
-          <div>
-            <span class="subtitulo">Acompanhamento</span>
-            <h2>O que estamos cultivando</h2>
-          </div>
-          <p>Esta parte poderá ser atualizada conforme a turma realizar novos plantios.</p>
-        </div>
+/* FIGURAS E IMAGENS */
+figure {
+    margin: 2rem 0;
+    text-align: center;
+}
 
-        <div class="grade-plantas">
-          <article class="planta">
-            <span class="planta-icone">🥬</span>
-            <h3>Alface</h3>
-            <p><strong>Plantio:</strong> Acompanhar no blog</p>
-            <p><strong>Colheita prevista:</strong> Em desenvolvimento</p>
-            <div class="progresso">
-              <span style="width: 35%;"></span>
-            </div>
-            <small>35% do ciclo acompanhado</small>
-          </article>
+figure img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+}
 
-          <article class="planta">
-            <span class="planta-icone">🌿</span>
-            <h3>Cebolinha</h3>
-            <p><strong>Plantio:</strong> Acompanhar no blog</p>
-            <p><strong>Colheita prevista:</strong> Em desenvolvimento</p>
-            <div class="progresso">
-              <span style="width: 20%;"></span>
-            </div>
-            <small>20% do ciclo acompanhado</small>
-          </article>
+figcaption {
+    font-size: 0.9rem;
+    color: #8b949e;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
 
-          <article class="planta">
-            <span class="planta-icone">🥦</span>
-            <h3>Couve</h3>
-            <p><strong>Plantio:</strong> Acompanhar no blog</p>
-            <p><strong>Colheita prevista:</strong> Em desenvolvimento</p>
-            <div class="progresso">
-              <span style="width: 15%;"></span>
-            </div>
-            <small>15% do ciclo acompanhado</small>
-          </article>
+/* GALERIA DE FOTOS DUPLA */
+.galeria-dupla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 2rem 0;
+}
 
-          <article class="planta">
-            <span class="planta-icone">🌱</span>
-            <h3>Próximo cultivo</h3>
-            <p><strong>Espécie:</strong> A definir com a turma</p>
-            <p><strong>Plantio:</strong> Aguardando</p>
-            <div class="progresso">
-              <span style="width: 5%;"></span>
-            </div>
-            <small>Em planejamento</small>
-          </article>
-        </div>
-      </div>
-    </section>
+.galeria-dupla figure {
+    margin: 0;
+}
 
-    <!-- GALERIA -->
-    <section class="secao galeria" id="galeria">
-      <div class="container">
-        <div class="titulo-secao">
-          <div>
-            <span class="subtitulo">Memórias do projeto</span>
-            <h2>Galeria da horta</h2>
-          </div>
-        </div>
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #161b22;
+    color: #8b949e;
+    border-top: 1px solid #30363d;
+    margin-top: 3rem;
+}
 
-        <div class="grade-galeria">
-          <figure>
-            <img src="img/galeria-1.jpg" alt="Atividade realizada na horta">
-            <figcaption>Primeiros trabalhos no espaço da horta</figcaption>
-          </figure>
+/* RESPONSIVIDADE PARA CELULAR */
+@media (max-width: 600px) {
+    .galeria-dupla {
+        grid-template-columns: 1fr;
+    }
+    
+    .post-container {
+        padding: 1.2rem;
+    }
 
-          <figure>
-            <img src="img/galeria-2.jpg" alt="Preparação da terra">
-            <figcaption>Preparação da terra</figcaption>
-          </figure>
-
-          <figure>
-            <img src="img/galeria-3.jpg" alt="Estudantes durante a atividade">
-            <figcaption>Aprendizado na prática</figcaption>
-          </figure>
-
-          <figure class="foto-placeholder">
-            <span>📷</span>
-            <figcaption>Próxima foto da turma</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- EQUIPE DE PROFESSORES -->
-    <section class="secao secao-equipe" id="equipe">
-      <div class="container">
-        <div class="titulo-centralizado">
-          <span class="subtitulo">Professores do projeto</span>
-          <h2>Quem acompanha essa experiência</h2>
-          <p>
-            Professores responsáveis pelas atividades da horta e pelo desenvolvimento do blog.
-          </p>
-        </div>
-
-        <div class="grade-professores">
-
-          <!-- PROFESSORA FRANCELIZE -->
-          <article class="cartao-professor">
-            <img src="img/francelize.png" alt="Professora Francelize Chiarotti" class="foto-professor">
-            <h3>Francelize Chiarotti</h3>
-            <span class="funcao-professor">Projeto da horta</span>
-            <p>Professora que acompanha as atividades práticas realizadas na horta.</p>
-          </article>
-
-          <!-- PROFESSOR CARLOS -->
-          <article class="cartao-professor">
-            <img src="img/carlos.png" alt="Professor Carlos Daniel Castro Benatto" class="foto-professor">
-            <h3>Carlos Daniel Castro Benatto</h3>
-            <span class="funcao-professor">Projeto da horta</span>
-            <p>Professor que acompanha as atividades práticas realizadas na horta.</p>
-          </article>
-
-          <!-- PROFESSORA MÁRJORY -->
-          <article class="cartao-professor">
-            <img src="img/marjory.png" alt="Professora Márjory Dal'Lin" class="foto-professor">
-            <h3>Márjory Dal'Lin</h3>
-            <span class="funcao-professor">Educação Digital</span>
-            <p>Professora responsável pela criação e pelo desenvolvimento do blog com os estudantes.</p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- RODAPÉ -->
-  <footer class="rodape">
-    <div class="container rodape-conteudo">
-      <div>
-        <strong>🌱 Blog Horta CQC Agro</strong>
-        <p>Desenvolvido coletivamente pelos estudantes nas aulas de Educação Digital.</p>
-      </div>
-
-      <a href="#inicio" class="voltar-topo">↑ Voltar ao início</a>
-    </div>
-
-    <p class="direitos">
-      © <span id="ano-atual"></span> Horta CQC Agro — Cultivando conhecimento.
-    </p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-
-</html>
+    .post-header h1 {
+        font-size: 1.6rem;
+    }
+}
