@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horta CQC Agro 2026</title>
-    <!-- Nome do CSS ajustado para style.css -->
+    <!-- Vinculado ao seu style.css -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,14 +18,15 @@
                 <li><a href="#projeto-futuro">O Projeto</a></li>
                 <li><a href="#campo">Campo</a></li>
                 <li><a href="#status">Status</a></li>
+                <li><a href="#blogs-alunos">Blogs</a></li>
                 <li><a href="#professores">Professores</a></li>
-                <li><a href="#colegio">Sobre & Blog</a></li>
+                <li><a href="#colegio">Sobre</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- 1. FOTO DA TURMA E MASCOTES -->
+        <!-- 1. FOTO DA TURMA E MASCOTES (PRIMEIRA COISA A SER VISTA) -->
         <section id="inicio" class="hero-section">
             <div class="card-degrade hero-card">
                 <h1>1º D AGRO — CQC 2026</h1>
@@ -36,7 +37,7 @@
                 </div>
             </div>
 
-          <div class="mascotes-container">
+            <div class="mascotes-container">
                 <h2>🐷 Nossos Mascotes</h2>
                 <div class="mascotes-grid">
                     <div class="card-degrade mascote-card">
@@ -130,7 +131,35 @@
             </div>
         </section>
 
-        <!-- 5. PROFESSORES RESPONSÁVEIS -->
+        <!-- 5. BLOGS DOS ALUNOS (ENTRE STATUS E PROFESSORES) -->
+        <section id="blogs-alunos" class="container">
+            <div class="card-degrade colegio-card">
+                <h2 class="titulo-secao" style="color: #81c784; margin-bottom: 0.5rem;">📝 Blogs e Diários de Campo dos Alunos</h2>
+                <p style="color: #e0e0e0; margin-bottom: 1rem;">Acompanhe as publicações e o aprendizado individual dos estudantes do 1º D Agro:</p>
+                
+                <div class="blog-grid-alunos">
+                    <!-- BLOG DO RAFAEL -->
+                    <div class="card-aluno">
+                        <h4>👨‍🌾 Blog do Rafael</h4>
+                        <p>Relatos e acompanhamento das práticas agrícolas.</p>
+                        <a href="https://santosgodoymaria-source.github.io/blog-horta-Rafael/" target="_blank" rel="noopener noreferrer" class="btn-blog">
+                            🚀 Acessar Blog do Rafael
+                        </a>
+                    </div>
+
+                    <!-- BLOG DA MARIA EDUARDA -->
+                    <div class="card-aluno">
+                        <h4>👩‍🌾 Blog da Maria Eduarda</h4>
+                        <p>Diários de campo e projetos do curso técnico.</p>
+                        <a href="https://santosgodoymaria-source.github.io/blog-horta-Maria/" target="_blank" rel="noopener noreferrer" class="btn-blog">
+                            🚀 Acessar Blog da Maria
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. PROFESSORES RESPONSÁVEIS -->
         <section id="professores" class="container">
             <h2 class="titulo-secao">👨‍🏫 Professores Responsáveis</h2>
             <div class="grid-3col">
@@ -158,38 +187,11 @@
             </div>
         </section>
 
-     <!-- 6. SOBRE O COLÉGIO + BLOGS DOS ALUNOS -->
+        <!-- 7. SOBRE O COLÉGIO CQC (ÚLTIMA SEÇÃO) -->
         <section id="colegio" class="container">
             <div class="card-degrade colegio-card">
                 <h2>🏫 Colégio Estadual Conselheiro Quielse Crisóstomo da Silva (CQC)</h2>
-                <p>Localizado em <strong>Bocaiúva do Sul (PR)</strong>, o Colégio CQC une teoria e prática na formação técnica do agronegócio.</p>
-                
-                <hr class="divisor">
-
-                <div class="blog-link-box">
-                    <h3>📝 Blogs e Diários de Campo dos Alunos</h3>
-                    <p>Acompanhe as publicações individuais feitas pelos estudantes do 1º D Agro:</p>
-                    
-                    <div class="blog-grid-alunos">
-                        <!-- BLOG DO RAFAEL -->
-                        <div class="card-aluno">
-                            <h4>👨‍🌾 Blog do Rafael</h4>
-                            <p>Relatos e acompanhamento das práticas agrícolas.</p>
-                            <a href="https://santosgodoymaria-source.github.io/blog-horta-Rafael/" target="_blank" rel="noopener noreferrer" class="btn-blog">
-                                🚀 Acessar Blog do Rafael
-                            </a>
-                        </div>
-
-                        <!-- BLOG DA MARIA EDUARDA -->
-                        <div class="card-aluno">
-                            <h4>👩‍🌾 Blog da Maria Eduarda</h4>
-                            <p>Diários de campo e projetos do curso técnico.</p>
-                            <a href="https://santosgodoymaria-source.github.io/blog-horta-Maria/" target="_blank" rel="noopener noreferrer" class="btn-blog">
-                                🚀 Acessar Blog da Maria
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <p>Localizado em <strong>Bocaiúva do Sul (PR)</strong>, o Colégio CQC une teoria e prática na formação técnica do agronegócio com o projeto Horta TECAGRO.</p>
             </div>
         </section>
     </main>
@@ -198,7 +200,7 @@
         <p>© 2026 Blog Horta CQC Agro — Bocaiúva do Sul (PR)</p>
     </footer>
 
-    <!-- MODAL PARA EXPANDIR AS FOTOS -->
+    <!-- MODAL PARA EXPANDIR AS FOTOS AO CLICAR -->
     <div id="modal-imagem" class="modal">
         <span class="fechar">&times;</span>
         <img class="modal-conteudo" id="img-ampliada">
