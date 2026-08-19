@@ -1,29 +1,31 @@
-// SCRIPT HORTA CQC AGRO
+// FUNCIONALIDADE PARA AMPLIAR IMAGENS AO CLICAR (LIGHTBOX)
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Atualizar ano atual no rodapé
-  const elementoAno = document.getElementById('ano-atual');
-  if (elementoAno) {
-    elementoAno.textContent = new Date().getFullYear();
-  }
+    const modal = document.getElementById('modal-imagem');
+    const imgModal = document.getElementById('img-ampliada');
+    const legendaModal = document.getElementById('legenda-modal');
+    const btnFechar = document.getElementsByClassName('fechar')[0];
 
-  // Toggle do menu mobile
-  const botaoMenu = document.getElementById('botao-menu');
-  const menu = document.getElementById('menu');
+    // Seleciona todos os containers de imagem marcados com a classe .zoomable
+    const imagensZoom = document.querySelectorAll('.zoomable img');
 
-  if (botaoMenu && menu) {
-    botaoMenu.addEventListener('click', () => {
-      menu.classList.toggle('ativo');
-      const expandido = menu.classList.contains('ativo');
-      botaoMenu.setAttribute('aria-expanded', expandido);
+    imagensZoom.forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = "block";
+            imgModal.src = this.src;
+            legendaModal.innerHTML = this.alt;
+        });
     });
 
-    // Fechar menu ao clicar num link
-    menu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        menu.classList.remove('ativo');
-        botaoMenu.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
+    // Fechar no X
+    btnFechar.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Fechar ao clicar fora da imagem
+    modal.onclick = function(e) {
+        if (e.target !== imgModal) {
+            modal.style.display = "none";
+        }
+    }
 });
