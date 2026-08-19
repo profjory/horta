@@ -1,178 +1,111 @@
-/* RESET E ESTILOS GERAIS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Horta CQC Agro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-    background-color: #0d1117; /* Fundo escuro restaurado */
-    color: #e6edf3;
-    line-height: 1.6;
-}
+    <header>
+        <div class="logo">
+            <span>🌱 Horta CQC Agro</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">O Projeto</a></li>
+                <li><a href="#">Blogs dos Alunos</a></li>
+                <li><a href="#">O que plantamos</a></li>
+                <li><a href="#">Equipe</a></li>
+            </ul>
+        </nav>
+    </header>
 
-/* CABEÇALHO */
-header {
-    background-color: #161b22;
-    padding: 1rem 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #30363d;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+    <main>
+        <article class="post-container">
+            <header class="post-header">
+                <h1>Projeto Horta TECAGRO CQC: O Futuro Agro Ganha Forma!</h1>
+                <p class="subtitulo">Colégio Estadual Conselheiro Quielse Crisótomo da Silva — Bocaiúva do Sul (PR)</p>
+            </header>
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #2ea043;
-}
+            <section class="post-content">
+                <p>
+                    O <strong>Colégio CQC</strong> dá um importante passo na formação prática dos seus estudantes! 
+                    Com as atividades do curso de <strong>Técnico em Agronegócio</strong>, a comunidade escolar se mobilizou 
+                    para transformar teoria em prática através da criação da nossa <strong>Horta TECAGRO CQC</strong>.
+                </p>
 
-.logo img {
-    width: 35px;
-    height: 35px;
-}
+                <figure>
+                    <img src="img/turma-1d-agro.jpg" alt="Turma do 1º D Agro">
+                    <figcaption>Estudantes do 1º D AGRO reunidos no Colégio CQC com a mascote do curso.</figcaption>
+                </figure>
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
+                <h2>🟢 O Início do Projeto: Demarcação do Terreno</h2>
+                <p>
+                    No momento, demos a largada inicial com o trabalho de <strong>topografia, piquetagem e demarcação de campo</strong>. 
+                    Ainda não temos cultivos plantados no local, mas os piquetes e linhas delimitadoras já mostram onde a mágica acontecerá!
+                </p>
 
-nav a {
-    color: #c9d1d9;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.3s;
-}
+                <div class="galeria-dupla">
+                    <figure>
+                        <img src="img/demarcacao-muro.jpg" alt="Demarcação dos canteiros">
+                        <figcaption>Piquetes demarcando as linhas de plantio e circulação.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/demarcacao-rampa.jpg" alt="Demarcação no terreno em aclive">
+                        <figcaption>Alinhamento das áreas no terreno do colégio.</figcaption>
+                    </figure>
+                </div>
 
-nav a:hover {
-    color: #2ea043;
-}
+                <h2>🗺️ Mapeamento Aéreo e Planejamento Espacial</h2>
+                <p>
+                    Para garantir a eficiência e o uso correto da área, elaboramos um mapa aéreo de demarcação espacial do colégio. 
+                    Ao todo, o projeto Horta TECAGRO abrange uma área total de <strong>570 m²</strong>, subdividida em setores bem definidos:
+                </p>
 
-/* CONTEÚDO PRINCIPAL */
-main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 20px;
-}
+                <ul>
+                    <li><strong>Área A (150 m²):</strong> Destinada a frutíferas e estruturas especiais.</li>
+                    <li><strong>Área B (330 m²):</strong> Área principal para hortaliças e grandes culturas.</li>
+                    <li><strong>Área C (90 m²):</strong> Área temporariamente interditada/de apoio.</li>
+                </ul>
 
-.post-container {
-    background-color: #161b22;
-    padding: 2.5rem;
-    border-radius: 12px;
-    border: 1px solid #30363d;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
+                <figure>
+                    <img src="img/mapa-aereo.jpg" alt="Mapa aéreo do Colégio CQC">
+                    <figcaption>Mapeamento técnico via satellite da área do projeto (570 m² total).</figcaption>
+                </figure>
 
-.post-header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
+                <h2>🌾 Como Ficará a Horta no Futuro?</h2>
+                <p>
+                    Compartilhamos com vocês a projeção de como o espaço ficará após o plantio e desenvolvimento das culturas! 
+                    A planta baixa ilustrada do projeto prevê uma diversidade impressionante de cultivos:
+                </p>
 
-.post-header h1 {
-    font-size: 2.2rem;
-    color: #2ea043;
-    margin-bottom: 0.5rem;
-}
+                <ul>
+                    <li>🍎 <strong>Área A:</strong> Árvores frutíferas (pêssego, nêspera) e estruturas para kiwi e maracujá.</li>
+                    <li>🥬 <strong>Área B:</strong> Canteiros organizados com hortaliças variadas.</li>
+                    <li>🌽 <strong>Grãos:</strong> Culturas integradas de milho e feijão.</li>
+                    <li>🌿 <strong>Culturas Regionais:</strong> Erva-mate e café.</li>
+                    <li>🍓 <strong>Morango Suspenso:</strong> Estrutura elevada para otimização de espaço e ergonomia.</li>
+                    <li>🪴 <strong>Temperos:</strong> Horta aromática ao lado das salas de apoio.</li>
+                </ul>
 
-.post-header .subtitulo {
-    color: #8b949e;
-    font-size: 1.1rem;
-}
+                <figure>
+                    <img src="img/projeto-futuro.jpg" alt="Ilustração 3D da horta concluída">
+                    <figcaption>Projeção de como ficará a Horta TECAGRO CQC em pleno funcionamento.</figcaption>
+                </figure>
 
-.post-content h2 {
-    color: #3fb950;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #21262d;
-    padding-bottom: 0.5rem;
-}
+                <blockquote>
+                    Acompanhe nosso blog para ver as próximas fases: preparo do solo, adubação e, em breve, as primeiras mudas no chão! 🌱
+                </blockquote>
+            </section>
+        </article>
+    </main>
 
-.post-content p {
-    margin-bottom: 1.2rem;
-    color: #c9d1d9;
-    font-size: 1.05rem;
-}
+    <footer>
+        <p>&copy; 2026 Blog Horta CQC Agro - Colégio Estadual Conselheiro Quielse Crisótomo da Silva</p>
+    </footer>
 
-.post-content ul {
-    margin-bottom: 1.5rem;
-    padding-left: 1.5rem;
-}
-
-.post-content li {
-    margin-bottom: 0.5rem;
-    color: #c9d1d9;
-}
-
-blockquote {
-    background-color: #0d1117;
-    border-left: 4px solid #2ea043;
-    padding: 1rem;
-    margin: 1.5rem 0;
-    font-style: italic;
-    color: #8b949e;
-}
-
-/* FIGURAS E IMAGENS */
-figure {
-    margin: 2rem 0;
-    text-align: center;
-}
-
-figure img {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 8px;
-    border: 1px solid #30363d;
-}
-
-figcaption {
-    font-size: 0.9rem;
-    color: #8b949e;
-    margin-top: 0.5rem;
-    font-style: italic;
-}
-
-/* GALERIA DE FOTOS DUPLA */
-.galeria-dupla {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin: 2rem 0;
-}
-
-.galeria-dupla figure {
-    margin: 0;
-}
-
-/* RODAPÉ */
-footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #161b22;
-    color: #8b949e;
-    border-top: 1px solid #30363d;
-    margin-top: 3rem;
-}
-
-/* RESPONSIVIDADE PARA CELULAR */
-@media (max-width: 600px) {
-    .galeria-dupla {
-        grid-template-columns: 1fr;
-    }
-    
-    .post-container {
-        padding: 1.2rem;
-    }
-
-    .post-header h1 {
-        font-size: 1.6rem;
-    }
-}
+</body>
+</html>
