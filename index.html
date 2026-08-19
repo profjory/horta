@@ -9,102 +9,111 @@
 <body>
 
     <header>
-        <div class="logo">
-            <span>🌱 Horta CQC Agro</span>
-        </div>
+        <div class="logo">🌱 Horta CQC Agro</div>
         <nav>
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">O Projeto</a></li>
-                <li><a href="#">Blogs dos Alunos</a></li>
-                <li><a href="#">O que plantamos</a></li>
-                <li><a href="#">Equipe</a></li>
+                <li><a href="#colegio">O Colégio</a></li>
+                <li><a href="#blog">Blog do Projeto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <article class="post-container">
+
+        <!-- SEÇÃO: INFORMAÇÕES DO COLÉGIO CQC DE BOCAIÚVA DO SUL -->
+        <section id="colegio" class="card-preto sobre-colegio">
+            <h2>🏫 Colégio Estadual Conselheiro Quielse Crisóstomo da Silva (CQC)</h2>
+            <p>
+                Localizado no município de <strong>Bocaiúva do Sul (PR)</strong>, o Colégio CQC é referência na educação pública da região. 
+                Atendendo alunos do Ensino Fundamental e Ensino Médio, a instituição conta com o curso de <strong>Técnico em Agronegócio</strong>, 
+                promovendo o aprendizado prático e o desenvolvimento sustentável integrado à comunidade escolar.
+            </p>
+
+            <div class="colegio-detalhes">
+                <div><strong>📍 Localização:</strong> Bocaiúva do Sul - PR</div>
+                <div><strong>🌾 Curso Técnico:</strong> Técnico em Agronegócio (1º D AGRO)</div>
+                <div><strong>🌱 Projeto Ativo:</strong> Horta Escolar TECAGRO CQC</div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: STATUS ATUAL DO PLANTIO -->
+        <section class="card-preto">
+            <h2>📊 Status do Cultivo</h2>
+            <div class="status-alerta">
+                <p>📍 <strong>Fase Atual: Demarcação e Prepáro do Terreno</strong></p>
+                <p>No momento, <span>não há espécies plantadas</span>. Toda a área de 570 m² passou pelos processos de medição, topografia e piquetagem de canteiros. O plantio das mudas e grãos será iniciado nas próximas etapas do projeto.</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: POSTS DO BLOG COM AS IMAGENS RENOMEADAS -->
+        <article id="blog" class="card-preto">
             <header class="post-header">
                 <h1>Projeto Horta TECAGRO CQC: O Futuro Agro Ganha Forma!</h1>
-                <p class="subtitulo">Colégio Estadual Conselheiro Quielse Crisótomo da Silva — Bocaiúva do Sul (PR)</p>
+                <p class="subtitulo">Acompanhe as etapas de planejamento, área e execução da nossa horta escolar.</p>
             </header>
 
             <section class="post-content">
                 <p>
-                    O <strong>Colégio CQC</strong> dá um importante passo na formação prática dos seus estudantes! 
-                    Com as atividades do curso de <strong>Técnico em Agronegócio</strong>, a comunidade escolar se mobilizou 
-                    para transformar teoria em prática através da criação da nossa <strong>Horta TECAGRO CQC</strong>.
+                    Com as atividades do curso de Técnico em Agronegócio, a turma do <strong>1º D AGRO</strong> se mobilizou 
+                    para estruturar do zero o espaço da nossa horta escolar.
                 </p>
 
+                <!-- FOTO 1: TURMA -->
                 <figure>
                     <img src="img/turma-1d-agro.jpg" alt="Turma do 1º D Agro">
                     <figcaption>Estudantes do 1º D AGRO reunidos no Colégio CQC com a mascote do curso.</figcaption>
                 </figure>
 
-                <h2>🟢 O Início do Projeto: Demarcação do Terreno</h2>
+                <h2>🟢 1. Demarcação do Terreno e Piquetagem</h2>
                 <p>
-                    No momento, demos a largada inicial com o trabalho de <strong>topografia, piquetagem e demarcação de campo</strong>. 
-                    Ainda não temos cultivos plantados no local, mas os piquetes e linhas delimitadoras já mostram onde a mágica acontecerá!
+                    A primeira fase prática consistiu na medição de campo, alinhamento e piquetagem com barbantes para limitar a extensão exata dos futuros canteiros e corredores de manejo.
                 </p>
 
+                <!-- FOTOS 2 E 3: DEMARCAÇÕES -->
                 <div class="galeria-dupla">
                     <figure>
-                        <img src="img/demarcacao-muro.jpg" alt="Demarcação dos canteiros">
-                        <figcaption>Piquetes demarcando as linhas de plantio e circulação.</figcaption>
+                        <img src="img/demarcacao-muro.jpg" alt="Demarcação dos canteiros ao lado do muro">
+                        <figcaption>Piquetes demarcando o alinhamento das áreas ao lado do muro.</figcaption>
                     </figure>
                     <figure>
-                        <img src="img/demarcacao-rampa.jpg" alt="Demarcação no terreno em aclive">
-                        <figcaption>Alinhamento das áreas no terreno do colégio.</figcaption>
+                        <img src="img/demarcacao-rampa.jpg" alt="Demarcação no terreno inclinado">
+                        <figcaption>Alinhamento de topografia na área inclinada do terreno.</figcaption>
                     </figure>
                 </div>
 
-                <h2>🗺️ Mapeamento Aéreo e Planejamento Espacial</h2>
+                <h2>🗺️ 2. Mapeamento Aéreo (Área de 570 m²)</h2>
                 <p>
-                    Para garantir a eficiência e o uso correto da área, elaboramos um mapa aéreo de demarcação espacial do colégio. 
-                    Ao todo, o projeto Horta TECAGRO abrange uma área total de <strong>570 m²</strong>, subdividida em setores bem definidos:
+                    Através de imagens aéreas, delimitamos uma área total de <strong>570 m²</strong> para o projeto Horta TECAGRO CQC, subdividida em:
                 </p>
-
                 <ul>
-                    <li><strong>Área A (150 m²):</strong> Destinada a frutíferas e estruturas especiais.</li>
-                    <li><strong>Área B (330 m²):</strong> Área principal para hortaliças e grandes culturas.</li>
-                    <li><strong>Área C (90 m²):</strong> Área temporariamente interditada/de apoio.</li>
+                    <li><strong>Área A (150 m²):</strong> Destinada a árvores frutíferas e estruturas.</li>
+                    <li><strong>Área B (330 m²):</strong> Canteiros para hortaliças e grãos.</li>
+                    <li><strong>Área C (90 m²):</strong> Área de apoio e logística.</li>
                 </ul>
 
+                <!-- FOTO 4: MAPA AÉREO -->
                 <figure>
-                    <img src="img/mapa-aereo.jpg" alt="Mapa aéreo do Colégio CQC">
-                    <figcaption>Mapeamento técnico via satellite da área do projeto (570 m² total).</figcaption>
+                    <img src="img/mapa-aereo.jpg" alt="Mapa aéreo da Horta CQC">
+                    <figcaption>Delimitação geográfica da Horta TECAGRO na área do colégio.</figcaption>
                 </figure>
 
-                <h2>🌾 Como Ficará a Horta no Futuro?</h2>
+                <h2>🌾 3. Projeção Futura do Espaço</h2>
                 <p>
-                    Compartilhamos com vocês a projeção de como o espaço ficará após o plantio e desenvolvimento das culturas! 
-                    A planta baixa ilustrada do projeto prevê uma diversidade impressionante de cultivos:
+                    Elaboramos um planejamento espacial de como ficará o local quando o plantio for realizado. A estrutura contará com canteiros de hortaliças, cultivo de milho e feijão, erva-mate, café, além de estufas de morango suspenso e canteiros de temperos.
                 </p>
 
-                <ul>
-                    <li>🍎 <strong>Área A:</strong> Árvores frutíferas (pêssego, nêspera) e estruturas para kiwi e maracujá.</li>
-                    <li>🥬 <strong>Área B:</strong> Canteiros organizados com hortaliças variadas.</li>
-                    <li>🌽 <strong>Grãos:</strong> Culturas integradas de milho e feijão.</li>
-                    <li>🌿 <strong>Culturas Regionais:</strong> Erva-mate e café.</li>
-                    <li>🍓 <strong>Morango Suspenso:</strong> Estrutura elevada para otimização de espaço e ergonomia.</li>
-                    <li>🪴 <strong>Temperos:</strong> Horta aromática ao lado das salas de apoio.</li>
-                </ul>
-
+                <!-- FOTO 5: MAQUETE / PROJETO FUTURO -->
                 <figure>
-                    <img src="img/projeto-futuro.jpg" alt="Ilustração 3D da horta concluída">
-                    <figcaption>Projeção de como ficará a Horta TECAGRO CQC em pleno funcionamento.</figcaption>
+                    <img src="img/projeto-futuro.jpg" alt="Projeto futuro da horta 3D">
+                    <figcaption>Maquete/Planta humanizada ilustrando o projeto concluído.</figcaption>
                 </figure>
-
-                <blockquote>
-                    Acompanhe nosso blog para ver as próximas fases: preparo do solo, adubação e, em breve, as primeiras mudas no chão! 🌱
-                </blockquote>
             </section>
         </article>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 Blog Horta CQC Agro - Colégio Estadual Conselheiro Quielse Crisótomo da Silva</p>
+        <p>&copy; 2026 Blog Horta CQC Agro — Colégio Estadual Conselheiro Quielse Crisóstomo da Silva (Bocaiúva do Sul - PR)</p>
     </footer>
 
 </body>
